@@ -93,6 +93,8 @@ posts = [{"@type": "BlogPosting", "headline": a['title'], "description": a['exce
 new_ld = '<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@graph": posts}, ensure_ascii=False) + '</script>'
 artikel_html = rd('artikel.html')
 artikel_html = re.sub(r'<script type="application/ld\+json">(?:(?!</script>).)*"BlogPosting"(?:(?!</script>).)*</script>', lambda m: new_ld, artikel_html, count=1, flags=re.S)
+# foto sampul kartu di halaman daftar artikel (sama dengan sampul di halaman artikel)
+artikel_html = re.sub(r'/\*SAMPUL\*/.*?/\*SAMPUL\*/', lambda m: '/*SAMPUL*/' + json.dumps({a['slug']: cover(a) for a in A}) + '/*SAMPUL*/', artikel_html, count=1)
 wr('artikel.html', artikel_html)
 urls = f'  <url><loc>{DOMAIN}</loc><lastmod>{A[0]["iso"]}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n' + ''.join(
     f'  <url><loc>{DOMAIN}{pg}</loc><lastmod>{A[0]["iso"]}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n' for pg in ('produk.html', 'produk-vivorti.html', 'produk-zecco.html', 'portofolio.html', 'artikel.html', 'kontak.html')) + ''.join(
