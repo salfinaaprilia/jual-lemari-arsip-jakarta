@@ -1,0 +1,11 @@
+# Salinan lama website (bukan versi yang dipakai)
+lemari-arsipp-main/
+
+# Pengaturan lokal editor / Claude
+.claude/
+
+# File sistem
+Thumbs.db
+desktop.ini
+.DS_Store
+__pycache__/

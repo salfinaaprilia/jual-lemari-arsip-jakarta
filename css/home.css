@@ -1,0 +1,294 @@
+/* =========================================================
+   home.css — bagian beranda: Pilih Merek, Ruang Penggunaan, Keunggulan Produk
+   Palet: putih + biru muda/biru sedang (tanpa biru tua). Font: Poppins.
+   Taruh file ini di folder css/ (css/home.css), dimuat setelah style.css.
+   ========================================================= */
+
+.cm-sec{
+  --ink:#22314a; --muted:#5f6f88;
+  --blue:#2f6fd6; --blue-d:#2459b3; --on-blue:#fff;
+  --tint:#eaf2fd; --tint2:#f4f8fe; --line:#dbe6f4;
+  --card:#fff; --shadow:0 14px 34px rgba(47,111,214,.10);
+  position:relative; overflow:hidden; font-family:Poppins,system-ui,sans-serif;
+}
+[data-theme="dark"] .cm-sec{
+  --ink:#eef3fc; --muted:#a9b8d4;
+  --blue:#6ea5f2; --blue-d:#8db8f6; --on-blue:#0b1730;
+  --tint:rgba(110,165,242,.13); --tint2:rgba(255,255,255,.04); --line:rgba(255,255,255,.12);
+  --card:#0f1e3d; --shadow:none;
+}
+
+/* Gaya judul section beranda (label kecil biru, judul biru tua tebal, paragraf pengantar).
+   Dipakai juga oleh judul FAQ di index.html supaya semua section seragam. */
+.cm-sec .eyebrow,.cm-sec .sc-kicker{
+  display:block; margin:0 0 14px; padding:0; background:none; color:var(--blue);
+  font:700 12.5px/1.2 Poppins,sans-serif; letter-spacing:.18em; text-transform:uppercase;
+}
+.cm-sec h2{
+  margin:0 0 14px; color:#0b1f4a;
+  font:800 clamp(26px,2.6vw,40px)/1.2 'Manrope','Poppins',sans-serif; letter-spacing:-.02em;
+}
+.cm-sec .lead{margin:0; color:#5f6f88; font-size:17px; line-height:1.85}
+.cm-head{max-width:760px; margin:0 auto 40px; text-align:center}
+.cm-head .lead{margin-inline:auto}
+
+.cm-btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  padding:11px 24px; border-radius:999px; background:var(--blue); color:var(--on-blue);
+  font:500 16px/1 Poppins,sans-serif; letter-spacing:.02em; text-decoration:none; white-space:nowrap;
+  box-shadow:0 8px 20px rgba(47,111,214,.22);
+  transition:transform .25s ease, background .25s ease, box-shadow .25s ease;
+}
+.cm-btn:hover,.cm-btn:focus-visible{background:var(--blue-d); transform:translateY(-2px); box-shadow:0 12px 24px rgba(47,111,214,.28); outline:0}
+.cm-btn i{font-style:normal; transition:transform .25s ease}
+.cm-btn:hover i{transform:translateX(3px)}
+
+/* ---------- 2. RUANG PENGGUNAAN (showcase) ---------- */
+/* Judul di tengah. Di layar lebar: foto kiri menempel saat scroll dan berganti mengikuti poin aktif di kanan.
+   Di HP/tablet: tiap poin menampilkan fotonya sendiri. Foto: assets/images/portofolio/ */
+#ruang-kerja{--navy:#0b1f4a; padding:clamp(72px,9vw,120px) 0; background:#fff; overflow:visible}
+#ruang-kerja .sc-head{margin-bottom:0}
+#ruang-kerja .sc{
+  display:grid; grid-template-columns:minmax(0,1.12fr) minmax(0,1fr); gap:clamp(32px,5vw,80px); align-items:start;
+  max-width:1140px; margin:clamp(40px,4vw,60px) auto 0;
+}
+#ruang-kerja .sc-visual{position:sticky; top:120px}
+#ruang-kerja .sc-stage{
+  position:relative; aspect-ratio:4/3; max-height:calc(100vh - 170px); border-radius:28px; overflow:hidden; isolation:isolate;
+  background:var(--navy); box-shadow:0 34px 70px -34px rgba(11,31,74,.45);
+}
+#ruang-kerja .sc-stage::after{content:""; position:absolute; inset:0; z-index:2; pointer-events:none; background:linear-gradient(180deg,rgba(11,31,74,0) 50%,rgba(11,31,74,.78) 100%)}
+#ruang-kerja .sc-img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transform:scale(1.06); transition:opacity .55s ease, transform 1.4s cubic-bezier(.22,1,.36,1)}
+#ruang-kerja .sc-img.is-active{z-index:1; opacity:1; transform:none}
+#ruang-kerja .sc-cap{
+  position:absolute; left:clamp(20px,2.4vw,32px); right:clamp(20px,2.4vw,32px); bottom:clamp(20px,2.4vw,28px); z-index:3; margin:0;
+  display:flex; align-items:baseline; justify-content:space-between; gap:16px; color:#fff;
+  opacity:0; transform:translateY(10px); transition:opacity .4s ease, transform .4s ease;
+}
+#ruang-kerja .sc-img.is-active + .sc-cap{opacity:1; transform:none; transition-delay:.12s}
+#ruang-kerja .sc-cap span{font:700 clamp(20px,1.9vw,26px)/1.2 'Manrope','Poppins',sans-serif; letter-spacing:-.015em}
+#ruang-kerja .sc-cap small{flex:none; color:#e8d3a0; font:600 13px/1 Poppins,sans-serif; letter-spacing:.14em; font-variant-numeric:tabular-nums}
+/* Daftar ruang berupa kartu: kartu aktif biru tua + teks putih, kartu lain putih bergaris tepi */
+#ruang-kerja .sc-list{display:flex; flex-direction:column; gap:14px}
+#ruang-kerja .sc-item{
+  position:relative; display:flex; align-items:center; overflow:hidden;
+  padding:clamp(22px,2.2vw,30px) clamp(22px,2.2vw,30px);
+  border:1px solid #dbe6f4; border-radius:20px; background:#fff; outline:0;
+  box-shadow:0 2px 6px rgba(11,31,74,.04);
+  transition:background .45s ease, border-color .45s ease, box-shadow .45s ease, transform .45s cubic-bezier(.22,1,.36,1);
+}
+/* garis emas di kiri kartu aktif */
+#ruang-kerja .sc-item::before{
+  content:""; position:absolute; left:0; top:22px; bottom:22px; width:3px; border-radius:0 3px 3px 0;
+  background:linear-gradient(180deg,#f0dfb4,#c8a96a); transform:scaleY(0); transform-origin:top; transition:transform .5s cubic-bezier(.22,1,.36,1);
+}
+/* cahaya halus di pojok kartu aktif */
+#ruang-kerja .sc-item::after{
+  content:""; position:absolute; right:-60px; top:-60px; width:180px; height:180px; border-radius:50%;
+  background:radial-gradient(circle,rgba(110,165,242,.35),transparent 70%); opacity:0; transition:opacity .45s ease; pointer-events:none;
+}
+#ruang-kerja .sc-inner{position:relative; z-index:1; display:grid; grid-template-columns:auto minmax(0,1fr); align-items:start; gap:clamp(16px,1.8vw,22px); width:100%}
+#ruang-kerja .sc-no{
+  display:grid; place-items:center; width:42px; height:42px; border-radius:12px;
+  background:#eef4fd; color:var(--blue); font:700 14px/1 'Manrope','Poppins',sans-serif; letter-spacing:.06em; font-variant-numeric:tabular-nums;
+  transition:background .45s ease, color .45s ease;
+}
+#ruang-kerja .sc-item h3{margin:8px 0 0; color:var(--navy); font:700 clamp(19px,1.6vw,22px)/1.3 'Manrope','Poppins',sans-serif; letter-spacing:-.015em; transition:color .45s ease}
+#ruang-kerja .sc-item p{max-width:46ch; margin:8px 0 0; color:#5f6f88; font-size:15px; line-height:1.7; transition:color .45s ease}
+/* kartu aktif */
+#ruang-kerja .sc-item.is-active{
+  border-color:transparent; transform:translateX(-6px);
+  background:linear-gradient(135deg,#0b1f4a 0%,#163a85 100%);
+  box-shadow:0 22px 44px -18px rgba(11,31,74,.55);
+}
+#ruang-kerja .sc-item.is-active::before{transform:scaleY(1)}
+#ruang-kerja .sc-item.is-active::after{opacity:1}
+#ruang-kerja .sc-item.is-active .sc-no{background:rgba(255,255,255,.12); color:#e8d3a0}
+#ruang-kerja .sc-item.is-active h3{color:#fff}
+#ruang-kerja .sc-item.is-active p{color:rgba(255,255,255,.82)}
+#ruang-kerja .sc-thumb{display:none; position:relative; z-index:1; margin:0; aspect-ratio:4/3; overflow:hidden; background:#eef4fd}
+#ruang-kerja .sc-thumb img{display:block; width:100%; height:100%; object-fit:cover}
+@media (min-width:993px){
+  #ruang-kerja .sc-item{cursor:pointer}
+  #ruang-kerja .sc-item:not(.is-active):hover{border-color:rgba(47,111,214,.45); background:#f6f9fe; box-shadow:0 14px 30px -18px rgba(11,31,74,.35)}
+  #ruang-kerja .sc-item:focus-visible{outline:2px solid var(--blue); outline-offset:3px}
+}
+/* HP & tablet: tiap kartu memuat fotonya sendiri, warna kartu berselang-seling putih dan biru tua */
+@media (max-width:992px){
+  #ruang-kerja .sc{grid-template-columns:1fr; max-width:640px}
+  #ruang-kerja .sc-visual,#ruang-kerja .sc-item::before,#ruang-kerja .sc-item::after{display:none}
+  #ruang-kerja .sc-list{gap:20px}
+  #ruang-kerja .sc-item,#ruang-kerja .sc-item.is-active{
+    flex-direction:column; align-items:stretch; padding:0; transform:none;
+    border:1px solid #dbe6f4; background:#fff; box-shadow:0 18px 40px -26px rgba(11,31,74,.4);
+  }
+  #ruang-kerja .sc-thumb{display:block}
+  #ruang-kerja .sc-inner{padding:20px 20px 22px}
+  #ruang-kerja .sc-item:nth-child(odd) .sc-no{background:#eef4fd; color:var(--blue)}
+  #ruang-kerja .sc-item:nth-child(odd) h3{color:var(--navy)}
+  #ruang-kerja .sc-item:nth-child(odd) p{color:#5f6f88}
+  #ruang-kerja .sc-item:nth-child(even){border-color:transparent; background:linear-gradient(135deg,#0b1f4a 0%,#163a85 100%)}
+  #ruang-kerja .sc-item:nth-child(even) .sc-no{background:rgba(255,255,255,.12); color:#e8d3a0}
+  #ruang-kerja .sc-item:nth-child(even) h3{color:#fff}
+  #ruang-kerja .sc-item:nth-child(even) p{color:rgba(255,255,255,.82)}
+}
+@media (prefers-reduced-motion:reduce){
+  #ruang-kerja .sc-img,#ruang-kerja .sc-cap,#ruang-kerja .sc-item::before{transition:none}
+}
+
+/* ---------- 1. PILIH MEREK ---------- */
+/* Kartu merek: foto produk unggulan besar di atas, lalu nama, jumlah model, deskripsi singkat, label jenis, dan tautan.
+   Seluruh kartu bisa diklik. Ganti foto lewat nama file di index.html (bagian #merek-kami). */
+#merek-kami{padding:clamp(64px,8vw,104px) 0; background:linear-gradient(180deg,#f3f7fd 0%,#eaf1fb 100%)}
+#merek-kami .cm-head{margin-bottom:clamp(32px,4vw,48px)}
+#merek-kami .mk-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(18px,2.4vw,28px); max-width:1080px; margin-inline:auto}
+#merek-kami .mk-card{
+  display:flex; flex-direction:column; overflow:hidden; color:inherit; text-decoration:none;
+  border:1px solid #dbe6f4; border-radius:22px; background:#fff;
+  box-shadow:0 2px 6px rgba(11,31,74,.04);
+  transition:opacity .8s ease, transform .8s cubic-bezier(.22,1,.36,1), border-color .35s ease, box-shadow .35s ease;
+}
+#merek-kami .mk-foto{display:block; aspect-ratio:16/10; overflow:hidden; background:#eef4fd}
+#merek-kami .mk-foto img{display:block; width:100%; height:100%; object-fit:cover; transition:transform .8s cubic-bezier(.22,1,.36,1)}
+#merek-kami .mk-isi{display:flex; flex-direction:column; flex:1; padding:clamp(22px,2.4vw,30px)}
+#merek-kami .mk-atas{display:flex; align-items:baseline; justify-content:space-between; gap:12px}
+#merek-kami .mk-card h3{margin:0; color:#0b1f4a; font:700 clamp(22px,2vw,26px)/1.2 'Manrope','Poppins',sans-serif; letter-spacing:-.015em}
+#merek-kami .mk-jumlah{flex:none; color:#5f6f88; font:500 14px/1 Poppins,sans-serif}
+#merek-kami .mk-desc{margin:10px 0 18px; color:#5f6f88; font-size:15.5px; line-height:1.7}
+#merek-kami .mk-chips{display:flex; flex-wrap:wrap; gap:8px; margin:0 0 22px; padding:0; list-style:none}
+#merek-kami .mk-chips li{padding:6px 12px; border-radius:999px; background:#eef4fd; color:#1d4d9e; font:500 13px/1.2 Poppins,sans-serif}
+#merek-kami .mk-link{
+  display:inline-flex; align-items:center; gap:8px; margin-top:auto; padding-top:18px; border-top:1px solid #e6edf7;
+  color:var(--blue); font:600 15px/1.3 Poppins,sans-serif;
+}
+#merek-kami .mk-link i{font-style:normal; transition:transform .3s ease}
+#merek-kami .mk-card:hover,#merek-kami .mk-card:focus-visible{border-color:rgba(47,111,214,.45); box-shadow:0 26px 50px -26px rgba(11,31,74,.35); outline:0}
+#merek-kami .mk-card:hover .mk-foto img,#merek-kami .mk-card:focus-visible .mk-foto img{transform:scale(1.05)}
+#merek-kami .mk-card:hover .mk-link i,#merek-kami .mk-card:focus-visible .mk-link i{transform:translateX(5px)}
+#merek-kami .mk-card:focus-visible{box-shadow:0 0 0 3px rgba(47,111,214,.35)}
+
+/* ---------- 3. KEUNGGULAN PRODUK (anatomi lemari) ---------- */
+/* Foto lemari terbuka dengan titik bernomor; daftar di samping menjelaskan tiap titik.
+   Foto: assets/images/keunggulan-lemari.webp. Posisi titik diatur lewat style="left:..%;top:..%" di index.html. */
+#keunggulan-produk{padding:clamp(64px,8vw,104px) 0; background:linear-gradient(180deg,#f6f9fd 0%,#fff 100%)}
+#keunggulan-produk .ap{
+  display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1fr); gap:clamp(36px,6vw,88px); align-items:center;
+  max-width:1040px; margin:0 auto;
+}
+#keunggulan-produk .ap-foto{position:relative; margin:0; aspect-ratio:4/5; border-radius:24px; overflow:hidden; background:#eef4fd; box-shadow:0 34px 70px -34px rgba(11,31,74,.45)}
+#keunggulan-produk .ap-foto img{display:block; width:100%; height:100%; object-fit:cover}
+#keunggulan-produk .ap-titik{
+  position:absolute; z-index:2; width:34px; height:34px; margin:-17px 0 0 -17px; padding:0; border:2px solid #fff; border-radius:50%;
+  display:grid; place-items:center; cursor:pointer;
+  background:#0b1f4a; color:#fff; font:700 14px/1 'Manrope','Poppins',sans-serif;
+  box-shadow:0 6px 16px rgba(11,31,74,.35); transition:transform .3s ease, background .3s ease, color .3s ease;
+}
+#keunggulan-produk .ap-titik::before{content:""; position:absolute; inset:-8px; border-radius:50%; border:2px solid rgba(255,255,255,.85); opacity:0}
+#keunggulan-produk .ap-titik.is-active{background:linear-gradient(135deg,#f0dfb4,#c8a96a); color:#0b1f4a; transform:scale(1.12)}
+#keunggulan-produk .ap-titik:focus-visible{outline:3px solid #2f6fd6; outline-offset:3px}
+@media (prefers-reduced-motion:no-preference){
+  @keyframes ap-denyut{0%{transform:scale(.7); opacity:.9}80%,100%{transform:scale(1.35); opacity:0}}
+}
+#keunggulan-produk .ap-list{list-style:none; margin:0; padding:0; border-top:1px solid #e3eaf4}
+#keunggulan-produk .ap-item{
+  display:flex; gap:18px; align-items:flex-start; padding:20px 16px 20px 0; border-bottom:1px solid #e3eaf4;
+  cursor:pointer; outline:0; transition:padding .35s ease;
+}
+#keunggulan-produk .ap-no{
+  flex:none; width:36px; height:36px; display:grid; place-items:center; border-radius:50%;
+  background:#eef4fd; color:#2f6fd6; font:700 14px/1 'Manrope','Poppins',sans-serif; transition:background .35s ease, color .35s ease;
+}
+#keunggulan-produk .ap-item h3{margin:6px 0 4px; color:#0b1f4a; font:700 18px/1.35 'Manrope','Poppins',sans-serif; letter-spacing:-.01em}
+#keunggulan-produk .ap-item p{margin:0; color:#5f6f88; font-size:15.5px; line-height:1.65}
+#keunggulan-produk .ap-item.is-active{padding-left:10px}
+#keunggulan-produk .ap-item.is-active .ap-no{background:#0b1f4a; color:#e8d3a0}
+#keunggulan-produk .ap-item:focus-visible{outline:2px solid #2f6fd6; outline-offset:2px}
+#keunggulan-produk .ap-catatan{margin:16px 0 0; color:#8a97ad; font-size:13.5px}
+#keunggulan-produk .ap-link{display:inline-flex; align-items:center; gap:8px; margin-top:18px; color:#2f6fd6; font:600 15px/1.3 Poppins,sans-serif; text-decoration:none}
+#keunggulan-produk .ap-link i{font-style:normal; transition:transform .3s ease}
+#keunggulan-produk .ap-link:hover i{transform:translateX(4px)}
+
+/* ---------- 4. ARTIKEL TERBARU ---------- */
+/* Isi kartu dibuat otomatis oleh perbarui_artikel_beranda.py dari js/articles.js. */
+#artikel-terbaru{padding:clamp(64px,8vw,104px) 0; background:#fff}
+#artikel-terbaru .at-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(18px,2.2vw,26px); max-width:1140px; margin:0 auto}
+#artikel-terbaru .at-card{
+  display:flex; flex-direction:column; overflow:hidden; color:inherit; text-decoration:none;
+  border:1px solid #dbe6f4; border-radius:20px; background:#fff; box-shadow:0 2px 6px rgba(11,31,74,.04);
+  transition:opacity .8s ease, transform .8s cubic-bezier(.22,1,.36,1), border-color .35s ease, box-shadow .35s ease;
+}
+#artikel-terbaru .at-foto{position:relative; display:block; aspect-ratio:16/10; overflow:hidden; background:#eef4fd}
+#artikel-terbaru .at-foto img{display:block; width:100%; height:100%; object-fit:cover; transition:transform .8s cubic-bezier(.22,1,.36,1)}
+#artikel-terbaru .at-cat{
+  position:absolute; left:14px; top:14px; padding:6px 12px; border-radius:999px;
+  background:rgba(11,31,74,.88); color:#fff; font:600 12px/1 Poppins,sans-serif; letter-spacing:.04em;
+}
+#artikel-terbaru .at-isi{display:flex; flex-direction:column; flex:1; padding:22px 22px 20px}
+#artikel-terbaru .at-meta{color:#8a97ad; font:500 13px/1.4 Poppins,sans-serif}
+#artikel-terbaru .at-card h3{margin:8px 0 10px; color:#0b1f4a; font:700 18px/1.4 'Manrope','Poppins',sans-serif; letter-spacing:-.01em}
+#artikel-terbaru .at-desc{
+  margin:0 0 18px; color:#5f6f88; font-size:15px; line-height:1.7;
+  display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
+}
+#artikel-terbaru .at-link{display:inline-flex; align-items:center; gap:8px; margin-top:auto; color:#2f6fd6; font:600 15px/1.3 Poppins,sans-serif}
+#artikel-terbaru .at-link i{font-style:normal; transition:transform .3s ease}
+#artikel-terbaru .at-card:hover,#artikel-terbaru .at-card:focus-visible{border-color:rgba(47,111,214,.45); box-shadow:0 26px 50px -26px rgba(11,31,74,.35); outline:0}
+#artikel-terbaru .at-card:hover .at-foto img,#artikel-terbaru .at-card:focus-visible .at-foto img{transform:scale(1.05)}
+#artikel-terbaru .at-card:hover .at-link i,#artikel-terbaru .at-card:focus-visible .at-link i{transform:translateX(5px)}
+#artikel-terbaru .at-card:focus-visible{box-shadow:0 0 0 3px rgba(47,111,214,.35)}
+#artikel-terbaru .at-semua{margin-top:clamp(28px,3.5vw,40px); text-align:center}
+#artikel-terbaru .at-btn{
+  display:inline-flex; align-items:center; gap:10px; padding:14px 28px; border-radius:999px;
+  border:1px solid #0b1f4a; color:#0b1f4a; font:600 15px/1.2 Poppins,sans-serif; text-decoration:none;
+  transition:background .25s ease, color .25s ease;
+}
+#artikel-terbaru .at-btn i{font-style:normal; transition:transform .25s ease}
+#artikel-terbaru .at-btn:hover,#artikel-terbaru .at-btn:focus-visible{background:#0b1f4a; color:#fff; outline:0}
+#artikel-terbaru .at-btn:hover i{transform:translateX(4px)}
+
+/* ---------- RESPONSIF ---------- */
+@media (max-width:1000px){
+  #keunggulan-produk .ap{grid-template-columns:1fr; max-width:520px}
+}
+@media (max-width:860px){
+  #artikel-terbaru .at-grid{grid-template-columns:1fr; max-width:520px}
+}
+@media (max-width:760px){
+  #merek-kami .mk-grid{grid-template-columns:1fr; max-width:520px}
+}
+@media (max-width:600px){
+  #keunggulan-produk .ap-titik{width:30px; height:30px; margin:-15px 0 0 -15px; font-size:13px}
+  .cm-head{margin-bottom:30px}
+}
+
+/* =========================================================
+   HERO (beranda) — latar biru cerah, tidak gelap
+   Hanya berlaku di beranda (.hero.home). Halaman lain tidak berubah.
+   ========================================================= */
+.hero.home .bg-slides{background:#dbe9fd}
+.hero.home .bg-slides span{filter:brightness(1.02) saturate(1.08) contrast(1.02)}
+.hero.home[data-bg]::before{
+  background:
+    linear-gradient(90deg,rgba(54,124,230,.80) 0%,rgba(84,148,240,.58) 42%,rgba(150,195,250,.10) 100%),
+    linear-gradient(0deg,rgba(235,244,255,.55) 0%,transparent 38%);
+}
+.hero.home h1{text-shadow:0 2px 16px rgba(25,70,160,.35)}
+.hero.home p{color:#fff;text-shadow:0 1px 12px rgba(25,70,160,.35)}
+.hero.home .btn-ghost{background:rgba(255,255,255,.14);box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)}
+@media (max-width:900px){
+  .hero.home[data-bg]::before{background:linear-gradient(180deg,rgba(54,124,230,.78),rgba(110,166,244,.60))}
+}
+
+/* =========================================================
+   FOOTER — putih (mode terang). Mode gelap tetap gelap.
+   ========================================================= */
+[data-theme="light"] .footer,
+html:not([data-theme]) .footer{
+  background:#fff; color:#5f6f88;
+  border-top:1px solid #dbe6f4;
+}
+[data-theme="light"] .footer .foot-grid b{color:#2f6fd6; font-weight:600}
+[data-theme="light"] .footer .foot-grid a:not(.brand){color:#5f6f88; transition:color .2s ease}
+[data-theme="light"] .footer .foot-grid a:not(.brand):hover{color:#2f6fd6}
+[data-theme="light"] .footer .foot-grid p{color:#5f6f88}
+[data-theme="light"] .footer .copy{border-top:1px solid #dbe6f4; color:#7a8aa3}

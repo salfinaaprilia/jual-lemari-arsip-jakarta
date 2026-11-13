@@ -1,0 +1,159 @@
+/* ===== Halaman detail produk (produk/<kode>.html). Simpan sebagai css/produk-detail.css ===== */
+
+/* Pita atas: menyatu dengan header, berisi jejak halaman */
+.d-top{padding:128px 0 26px;color:#fff;border-bottom:2px solid var(--gold);
+  background:linear-gradient(90deg,rgba(5,13,31,.94) 0%,rgba(5,13,31,.76) 40%,rgba(5,13,31,.30) 100%),url('../assets/images/bg/produk-1.jpg') center 62%/cover no-repeat,#050d1f}
+.d-top .crumbs{margin:0}
+
+/* Galeri kiri + info kanan */
+.d-main{padding:clamp(36px,5vw,56px) 0 clamp(36px,5vw,56px)}
+.d-grid{display:grid;grid-template-columns:minmax(0,680px) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:start}
+.d-gal{display:grid;grid-template-columns:100px minmax(0,1fr);gap:12px;align-items:start}
+.d-thumbs{display:flex;flex-direction:column;gap:12px}
+.d-th{position:relative;display:block;aspect-ratio:1/1.08;overflow:hidden;padding:0;border:2px solid transparent;border-radius:4px;background:#0b1f4a;cursor:pointer}
+.d-th img{display:block;width:100%;height:100%;object-fit:cover}
+.d-th span{position:absolute;left:0;right:0;bottom:0;padding:20px 8px 6px;text-align:left;font-size:0.94rem;font-weight:600;color:#fff;background:linear-gradient(transparent,rgba(5,13,31,.88))}
+.d-th[aria-pressed=true],.d-th:hover{border-color:var(--gold)}
+.d-stage{position:relative}
+.d-view{aspect-ratio:4/5;border-radius:4px;overflow:hidden;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 50% 38%,#2a539f 0%,#0b1f4a 55%,#050d1f 100%)}
+.d-view img{display:block}
+.d-view img.is-product{width:100%;height:100%;object-fit:cover;filter:none}
+.d-view img.is-detail{width:100%;height:100%;object-fit:cover}
+.d-zoom{position:absolute;top:14px;right:14px;padding:8px 16px;font:inherit;font-size:0.94rem;letter-spacing:.04em;color:var(--gold);
+  background:rgba(5,13,31,.45);border:1px solid var(--gold);border-radius:3px;cursor:pointer;transition:background .2s}
+.d-zoom:hover{background:rgba(200,169,106,.25)}
+.d-th:focus-visible,.d-zoom:focus-visible,.d-sz:focus-visible,.lb-x:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+/* Foto detail yang belum diunggah: tampilkan potongan foto produk sebagai pengganti sementara */
+.fb{transform:scale(2.4)}
+.fb1{transform-origin:60% 40%}.fb2{transform-origin:72% 46%}.fb3{transform-origin:38% 30%}.fb4{transform-origin:50% 72%}
+
+.d-info .ptype{display:inline-block;align-self:auto}
+.d-info h1{font-size:clamp(2rem,3.4vw,3.25rem);line-height:1.1;letter-spacing:-.035em;font-weight:500;color:var(--navy);margin-bottom:16px}
+.d-info>p{font-size:1.16rem;color:var(--muted);font-weight:400;margin-bottom:28px;max-width:60ch}
+.d-spec{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:4px;margin-bottom:28px}
+.d-spec div{padding:18px 20px;border-left:1px solid var(--line)}.d-spec div:first-child{border-left:0}
+.d-spec dt{font-size:0.94rem;color:var(--gold-d);letter-spacing:.06em}.d-spec dd{font-weight:500;font-size:1.1rem}
+.d-act{display:flex;flex-wrap:wrap;gap:12px;padding-bottom:28px;margin-bottom:24px;border-bottom:1px solid var(--line)}
+.d-ok{list-style:none;display:grid;gap:10px;color:var(--muted);font-weight:400}
+.d-ok li{display:flex;gap:12px;align-items:center}.d-ok li::before{content:"\2713";color:var(--gold-d);font-weight:600}
+
+/* Detail produk dan pilihan 10 ukuran */
+.d-more{padding:clamp(48px,6vw,80px) 0;border-top:1px solid var(--line)}
+.d-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(32px,5vw,72px);align-items:start}
+.d-h{font-size:1.89rem;line-height:1.2;letter-spacing:-.02em;font-weight:800;color:#0b1f4a;font-family:'Manrope','Poppins',sans-serif;margin-bottom:18px}
+.d-note{color:var(--muted);font-weight:400;font-size:1.01rem;margin:-6px 0 18px}
+.d-table div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-top:1px solid var(--line)}
+.d-table dt{font-size:0.94rem;color:var(--gold-d);letter-spacing:.06em}.d-table dd{font-weight:500;text-align:right}
+.d-sizes{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.d-sz{display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px 6px 12px;border:1px solid var(--line);border-radius:4px;background:#fff;color:inherit;font:inherit;cursor:pointer;transition:border-color .2s,background .2s}
+.d-sz:hover{border-color:var(--gold)}
+.d-sz[aria-pressed=true]{border-color:var(--gold);background:rgba(200,169,106,.13)}
+.d-szi{height:72px;width:100%;display:flex;align-items:flex-end;justify-content:center}.d-szi img{width:auto;max-width:90%}
+.d-szl{font-size:0.94rem;font-weight:500;line-height:1.35;text-align:center}
+
+/* Produk lain dari merek yang sama */
+.d-other{padding:0 0 clamp(80px,9vw,120px)}
+.d-ogrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.d-oc{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:box-shadow .3s,transform .3s}
+.d-oc:hover{transform:translateY(-4px);box-shadow:0 22px 40px rgba(11,31,74,.12)}
+.o-img{display:flex;justify-content:center;padding:18px 12px 12px;background:radial-gradient(circle at 50% 38%,#2a539f 0%,#0b1f4a 55%,#050d1f 100%)}
+.o-img img{height:150px;width:auto;filter:drop-shadow(0 14px 14px rgba(0,0,0,.45))}
+.d-oc b{padding:14px 18px 0;font-family:'Manrope','Poppins',sans-serif;font-weight:600;color:var(--navy)}
+.d-oc small{padding:0 18px 16px;color:var(--muted);font-weight:400}
+
+/* Jendela perbesar foto: di tengah layar dan besar */
+.lb{position:fixed;inset:0;margin:auto;width:fit-content;height:fit-content;border:0;padding:0;background:transparent;max-width:96vw;max-height:96vh;overflow:visible}
+.lb::backdrop{background:rgba(5,13,31,.88)}
+.lb img{display:block;height:min(88vh,960px);width:auto;max-width:94vw;object-fit:contain;border-radius:4px;background:radial-gradient(circle at 50% 38%,#2a539f 0%,#0b1f4a 55%,#050d1f 100%)}
+.lb-x{position:absolute;top:10px;right:10px;z-index:2;width:42px;height:42px;border-radius:50%;border:0;background:#fff;color:var(--navy);font-size:2.01rem;line-height:1;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+body:has(dialog[open]){overflow:hidden}
+
+/* Mode gelap */
+[data-theme=dark] :is(.d-info h1,.d-h,.d-oc b){color:#f2f6ff}
+[data-theme=dark] :is(.d-sz,.d-oc){background:#0c1a36}
+[data-theme=dark] .d-sz[aria-pressed=true]{background:rgba(200,169,106,.16)}
+
+/* Desktop: kolom foto kecil dibuat setinggi foto besar */
+@media(min-width:701px){
+  .d-gal{align-items:stretch}
+  .d-th{flex:1;min-height:0;aspect-ratio:auto}
+}
+
+/* Tampilan tablet dan HP */
+@media(max-width:1000px){
+  .d-grid,.d-cols{grid-template-columns:1fr}
+  .d-ogrid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px){
+  .d-top{padding-top:112px}
+  .d-gal{grid-template-columns:1fr}
+  .d-thumbs{flex-direction:row;order:2}.d-th{flex:1;aspect-ratio:1/1}
+  .d-spec{grid-template-columns:1fr}.d-spec div{border-left:0;border-top:1px solid var(--line)}.d-spec div:first-child{border-top:0}
+  .d-sizes{grid-template-columns:repeat(2,1fr)}
+}
+/* Tombol kembali ke halaman produk merek (Vivorti / Zecco) */
+.d-back{display:inline-flex;align-items:center;gap:12px;margin:0 0 24px;padding:6px 24px 6px 6px;border-radius:999px;background:linear-gradient(135deg,#0b1f4a 0%,#173a78 55%,#2f6fd6 100%);color:#fff;font-weight:600;font-size:.95rem;line-height:1.2;letter-spacing:.01em;box-shadow:0 10px 24px rgba(11,31,74,.24);transition:transform .25s ease,box-shadow .25s ease}
+.d-back i{flex:none;width:36px;height:36px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(135deg,#dcc48d,#c8a96a 55%,#b18f4c);color:#0b1f4a;font-style:normal;font-size:1.2rem;line-height:1;box-shadow:0 4px 10px rgba(0,0,0,.22);transition:transform .25s ease}
+.d-back:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(47,111,214,.32)}
+.d-back:hover i{transform:translateX(-4px)}
+.d-back:focus-visible{outline:2px solid #c8a96a;outline-offset:3px}
+[data-theme=dark] .d-back{background:linear-gradient(135deg,#173a78 0%,#2f6fd6 100%)}
+
+/* ===== Halaman detail produk (desain baru, sama seperti situs kursi sekolah) =====
+   Kartu putih dua kolom: foto di kiri, nama + tabel spesifikasi + tombol di kanan. */
+body.pd-page .navbar{background:rgba(255,255,255,.96);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid #e6edf7;box-shadow:0 8px 30px rgba(5,13,31,.06)}
+/* logo berwarna asli dan garis menu biru tua (bawaan style.css membuatnya putih saat header belum digulir) */
+[data-theme] body.pd-page .navbar .logo-light{filter:none!important}
+[data-theme] body.pd-page .navbar .menu-toggle span{background:#0b1f4a!important}
+@media(min-width:901px){
+  [data-theme] body.pd-page .navbar .nav-menu>a:not(.btn),[data-theme] body.pd-page .navbar .dropdown-btn,[data-theme] body.pd-page .navbar .brand{color:#0b1f4a!important}
+  [data-theme] body.pd-page .navbar .nav-menu>a:not(.btn):hover,[data-theme] body.pd-page .navbar .dropdown-btn:hover{color:#a98548!important}
+  [data-theme] body.pd-page .navbar .nav-menu a[aria-current=page]{color:#a98548!important}
+}
+.pd{padding:clamp(112px,11vw,140px) 0 clamp(64px,8vw,96px);background:linear-gradient(180deg,#f6f9fd 0%,#fff 60%)}
+.pd .wrap{max-width:calc(1200px + 2 * var(--pad,24px));margin-inline:auto}
+.pd-crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 22px;color:#64748b;font:600 13px/1.6 'Poppins',sans-serif}
+.pd-crumbs a{color:#64748b;text-decoration:none;transition:color .2s ease}
+.pd-crumbs a:hover{color:#2f6fd6}
+.pd-crumbs span{color:#b4bfd2}
+.pd-crumbs [aria-current]{color:#334155}
+.pd-grid{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1fr);gap:clamp(24px,3vw,36px);align-items:stretch;padding:24px;border:1px solid #e6ecf5;border-radius:30px;background:#fff;box-shadow:0 6px 18px -10px rgba(15,23,42,.14)}
+.pd-media{margin:0;display:flex;flex-direction:column}
+/* foto mengisi tinggi kolom kiri dari atas sampai bawah kartu, tanpa latar */
+.pd-view{position:relative;flex:1;min-height:360px;border-radius:24px;overflow:hidden;background:none}
+.pd-view img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain}
+.pd-thumbs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:12px}
+.pd-th{display:flex;flex-direction:column;gap:6px;padding:0;border:0;background:none;cursor:pointer;font:500 12px/1.3 'Poppins',sans-serif;color:#64748b;text-align:center}
+.pd-th img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;border:2px solid #e6ecf5;background:#fff;transition:border-color .2s ease}
+.pd-th[aria-pressed=true] img{border-color:#2f6fd6}
+.pd-th:hover img{border-color:#9dbcf0}
+.pd-th:focus-visible{outline:2px solid #2f6fd6;outline-offset:3px;border-radius:12px}
+.pd-body{padding:12px 0}
+.pd-type{display:inline-block;margin-bottom:10px;color:#2f6fd6;font:700 12.5px/1.3 'Poppins',sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.pd-name{margin:0;color:#0f172a;font:800 clamp(28px,2.7vw,36px)/1.18 'Manrope','Poppins',sans-serif;letter-spacing:-.022em}
+.pd-desc{margin:12px 0 0;color:#526581;font-size:15.5px;line-height:1.75}
+.pd-table-wrap{margin:22px 0 0;border:1px solid #dce7f8;border-radius:13px;overflow:hidden}
+.pd-table{width:100%;border-collapse:collapse;font:400 14px/1.5 'Poppins',sans-serif;color:#526581}
+.pd-table th,.pd-table td{padding:12px 16px;text-align:left;vertical-align:top}
+.pd-table thead th{background:#edf4ff;color:#172544;font-weight:800;border-bottom:1px solid #d8e5fb}
+.pd-table tbody th{width:42%;color:#14213d;font-weight:700}
+.pd-table tbody tr+tr th,.pd-table tbody tr+tr td{border-top:1px solid #eef3fb}
+.pd-actions{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.pd-btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:16px 32px;border-radius:999px;background:#2563eb;color:#fff;font:700 16px/1 'Poppins',sans-serif;text-decoration:none;box-shadow:0 14px 32px -14px rgba(37,99,235,.5);transition:background .25s ease,transform .25s ease}
+.pd-btn i{font-style:normal;transition:transform .25s ease}
+.pd-btn:hover{background:#1d4ed8;transform:translateY(-2px)}
+.pd-btn:hover i{transform:translateX(4px)}
+.pd-btn:focus-visible{outline:2px solid #0b1f4a;outline-offset:3px}
+.pd-back{align-self:center;color:#526581;font:500 14px/1.4 'Poppins',sans-serif;text-decoration:none}
+.pd-back:hover{color:#2f6fd6}
+@media(max-width:900px){
+  .pd-grid{grid-template-columns:1fr;padding:16px;border-radius:24px}
+  .pd-view{flex:none;min-height:0;aspect-ratio:5/6;max-height:70vh}
+  .pd-body{padding:4px 4px 8px}
+}
+@media(max-width:520px){
+  .pd-thumbs{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .pd-table th,.pd-table td{padding:10px 12px;font-size:13.5px}
+}

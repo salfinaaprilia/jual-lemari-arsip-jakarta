@@ -1,0 +1,5 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# File .bat Windows tetap memakai akhir baris CRLF
+*.bat text eol=crlf

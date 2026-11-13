@@ -1,0 +1,63 @@
+/* =========================================================
+   artikel.css — halaman detail artikel (artikel/*.html)
+   Susunan seperti blog WordPress: judul + foto sampul, isi 700px + Daftar Isi yang menempel,
+   lalu Artikel Terkait. Dipakai oleh templat-artikel.html.
+   ========================================================= */
+.ad-wrap{max-width:calc(1136px + 2 * var(--pad,24px));margin-inline:auto;padding-inline:var(--pad,24px)}
+
+/* ---- Bagian atas: breadcrumb, meta, judul, foto sampul ---- */
+.ad-hero{padding:clamp(108px,10vw,136px) 0 0;background:#fff}
+.ad-crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 clamp(28px,3.5vw,48px);color:#64748b;font:600 13px/1.6 'Poppins',sans-serif}
+.ad-crumbs a{color:#64748b;text-decoration:none;transition:color .2s ease}
+.ad-crumbs a:hover{color:#2f6fd6}
+.ad-crumbs span{color:#b4bfd2}
+.ad-crumbs [aria-current]{color:#334155;font-weight:600}
+.ad-head{max-width:860px}
+.ad-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin-bottom:16px;color:#64748b;font:400 14px/1.6 'Poppins',sans-serif}
+.ad-cat{display:inline-block;padding:7px 12px;border-radius:999px;background:#0b1f4a;color:#e8d3a0;font:700 11px/1 'Poppins',sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.ad-meta .ad-dot{width:4px;height:4px;border-radius:50%;background:#cbd5e1}
+.ad-title{margin:0;color:#0f172a;font:800 clamp(30px,3.8vw,52px)/1.12 'Manrope','Poppins',sans-serif;letter-spacing:-.03em}
+.ad-cover{margin:clamp(32px,3.5vw,48px) 0 0;aspect-ratio:2.33/1;border-radius:clamp(20px,2.4vw,32px);overflow:hidden;background:#f4f8ff}
+.ad-cover img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* ---- Isi + Daftar Isi ---- */
+.ad-section{padding:clamp(40px,5vw,72px) 0 0;background:#fff}
+.ad-layout{display:grid;grid-template-columns:minmax(0,700px) 260px;justify-content:space-between;gap:48px;max-width:1080px;margin-inline:auto}
+.ad-content{color:#1e293b;font:400 clamp(17px,1.4vw,19px)/1.75 'Poppins',sans-serif}
+.ad-content p{margin:0 0 20px}
+.ad-content .ad-intro{padding-left:20px;border-left:3px solid #d4b26a;color:#0f172a;font-size:clamp(18px,1.55vw,21px);line-height:1.7}
+.ad-content h2{margin:52px 0 14px;color:#0f172a;font:800 clamp(22px,2.1vw,28px)/1.25 'Manrope','Poppins',sans-serif;letter-spacing:-.02em;scroll-margin-top:110px}
+.ad-side{position:sticky;top:108px;align-self:start}
+.ad-toc strong{display:block;color:#0f172a;font:800 12px/1.2 'Poppins',sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.ad-toc ol{list-style:none;margin:16px 0 0;padding:0;border-left:2px solid #e6ecf5}
+.ad-toc li a{display:block;margin-left:-2px;padding:8px 0 8px 18px;border-left:2px solid transparent;color:#64748b;font:400 14px/1.5 'Poppins',sans-serif;text-decoration:none;transition:color .2s ease,border-color .2s ease}
+.ad-toc li a:hover,.ad-toc li a.is-active{color:#0b1f4a;border-left-color:#d4b26a;font-weight:600}
+.ad-back{display:inline-block;margin-top:24px;padding-top:20px;border-top:1px solid #e6ecf5;color:#475569;font:600 14px/1.6 'Poppins',sans-serif;text-decoration:none}
+.ad-back:hover{color:#2f6fd6}
+
+/* ---- Artikel Terkait ---- */
+.ad-relwrap{margin-top:clamp(56px,7vw,96px);padding:clamp(48px,6vw,80px) 0;background:#f4f8ff;border-top:1px solid #e6ecf5}
+.ad-related{max-width:1080px;margin:0 auto}
+.ad-related h2{margin:0 0 32px;color:#0f172a;font:800 clamp(26px,2.4vw,32px)/1.2 'Manrope','Poppins',sans-serif;letter-spacing:-.02em}
+.ad-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.ad-card{display:flex;flex-direction:column;padding:10px;border:1px solid #e6ecf5;border-radius:28px;background:#fff;color:inherit;text-decoration:none;transition:border-color .3s ease,box-shadow .3s ease,transform .3s ease}
+.ad-card:hover{border-color:rgba(47,111,214,.4);box-shadow:0 22px 44px -24px rgba(15,23,42,.3);transform:translateY(-3px)}
+.ad-card figure{margin:0;aspect-ratio:16/9;border-radius:20px;overflow:hidden;background:#f4f8ff}
+.ad-card figure img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.ad-card:hover figure img{transform:scale(1.04)}
+.ad-card .ad-cbody{display:flex;flex-direction:column;flex:1;padding:16px 12px 12px}
+.ad-card .ad-meta{margin:0;font-size:13px}
+.ad-card .ad-cat{padding:5px 10px;font-size:10px}
+.ad-card h3{margin:14px 0 0;color:#0f172a;font:800 19px/1.4 'Manrope','Poppins',sans-serif;letter-spacing:-.015em}
+.ad-card p{margin:10px 0 20px;color:#64748b;font:400 14px/1.7 'Poppins',sans-serif}
+.ad-card .ad-more{margin-top:auto;color:#0b1f4a;font:600 14px/1.3 'Poppins',sans-serif}
+
+@media(max-width:1000px){
+  .ad-layout{grid-template-columns:1fr;gap:0}
+  .ad-side{position:static;order:-1;margin-bottom:32px;padding:18px 20px;border:1px solid #e6ecf5;border-radius:18px;background:#f8fafd}
+  .ad-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:640px){
+  .ad-grid{grid-template-columns:1fr}
+  .ad-cover{aspect-ratio:16/10}
+}

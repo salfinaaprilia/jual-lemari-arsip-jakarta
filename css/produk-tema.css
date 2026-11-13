@@ -1,0 +1,86 @@
+/* ===== Tema biru halaman produk (disamakan dengan beranda) =====
+   Dimuat SETELAH css/style.css di produk.html, produk-vivorti.html, dan produk-zecco.html.
+   Ubah warna cukup di blok :root di bawah ini. Warna diambil dari beranda (bagian FAQ dan tombol). */
+:root{
+  --pt-blue:#2f6fd6;          /* biru utama beranda */
+  --pt-blue-a:#3b7fe0;        /* awal gradasi */
+  --pt-blue-b:#5a9af0;        /* akhir gradasi */
+  --pt-tint:#dbe9fd;          /* biru muda untuk teks di atas biru */
+  --pt-ink:#22314a;           /* judul */
+  --pt-text:#4a566d;          /* teks isi */
+  --pt-bg:#f6f8fb;           /* latar lembut */
+  --pt-line:rgba(47,111,214,.14);
+  --pt-shadow:0 14px 34px rgba(47,111,214,.10);
+}
+
+/* ---------- Blok merek ---------- */
+.brand-block{margin-bottom:64px}
+.brand-head{background:linear-gradient(150deg,var(--pt-blue-a) 0%,var(--pt-blue-b) 100%) !important;color:#fff !important;border:1px solid var(--pt-line) !important;border-radius:24px !important;box-shadow:0 22px 50px rgba(47,111,214,.22) !important}
+.brand-head p{color:rgba(255,255,255,.86) !important}
+.brand-head img{background:#fff;border-radius:14px;padding:10px 16px}
+
+/* ---------- Kartu produk ---------- */
+.pcard{background:#fff !important;border:1px solid var(--pt-line) !important;border-radius:20px !important;box-shadow:0 9px 25px rgba(47,111,214,.06) !important;overflow:hidden;transition:border-color .25s,box-shadow .25s,transform .25s}
+.pcard:hover{border-color:rgba(47,111,214,.40) !important;box-shadow:var(--pt-shadow) !important;transform:translateY(-3px)}
+.pcard .thumb{background:linear-gradient(160deg,#eaf2fe 0%,#cfe0fb 100%) !important}
+.pcard .pbody{background:#fff !important;color:var(--pt-text) !important}
+.pcard .pbody h4{color:var(--pt-ink) !important}
+.pcard .pbody p{color:var(--pt-text) !important}
+.pcard .ptype{color:var(--pt-blue) !important;background:rgba(47,111,214,.08);border:1px solid rgba(47,111,214,.28);border-radius:999px;padding:4px 11px;display:inline-block}
+.pcard dl dt{color:#5f6b82 !important}
+.pcard dl dd{color:var(--pt-ink) !important}
+
+/* ---------- Deretan ukuran ---------- */
+.sz{background:#fff !important;border:1px solid var(--pt-line) !important;color:var(--pt-text) !important;border-radius:8px !important}
+.sz:hover{background:#eef4fe !important}
+.sz[aria-pressed=true]{background:var(--pt-blue) !important;border-color:var(--pt-blue) !important;color:#fff !important}
+.sz:focus-visible,.sz-open:focus-visible{outline:2px solid var(--pt-blue) !important}
+.sz-open{color:var(--pt-blue) !important;background:#fff !important;border:1px solid var(--pt-blue) !important;border-radius:10px !important;font-weight:600}
+.sz-open:hover{background:var(--pt-blue) !important;color:#fff !important}
+
+/* ---------- Tombol ---------- */
+.pcard .btn-primary,.brand-switch a{background:var(--pt-blue) !important;border-color:var(--pt-blue) !important;color:#fff !important}
+.pcard .btn-primary:hover{background:var(--pt-blue-a) !important}
+
+/* ---------- Halaman pemilih merek (produk.html) ---------- */
+.brand-pick{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.bp-card{position:relative;display:flex;flex-direction:column;gap:14px;padding:34px;border:1px solid var(--pt-line);border-radius:24px;background:#fff;text-decoration:none;color:var(--pt-text);box-shadow:0 9px 25px rgba(47,111,214,.06);transition:transform .3s,box-shadow .3s,border-color .3s}
+.bp-card:hover{transform:translateY(-4px);border-color:rgba(47,111,214,.40);box-shadow:var(--pt-shadow)}
+.bp-logo{display:flex;align-items:center;justify-content:center;min-height:130px;border-radius:18px;background:linear-gradient(160deg,#eaf2fe 0%,#cfe0fb 100%)}
+.bp-logo img{max-width:70%;max-height:90px;width:auto;height:auto}
+.bp-card h2{margin:0;color:var(--pt-ink);font-size:2rem;letter-spacing:-.02em}
+.bp-card p{margin:0;color:var(--pt-text);line-height:1.8;font-size:1.16rem}
+.bp-models{display:flex;flex-wrap:wrap;gap:8px}
+.bp-models span{padding:5px 12px;border-radius:999px;background:rgba(47,111,214,.08);border:1px solid rgba(47,111,214,.22);color:var(--pt-blue);font-weight:600;font-size:1.04rem}
+/* Tombol "Lihat produk ...": gradasi biru tua seperti CTA penutup, panah dalam lingkaran emas */
+.bp-go{position:relative;overflow:hidden;isolation:isolate;margin-top:auto;align-self:center;width:fit-content;display:inline-flex;align-items:center;justify-content:space-between;gap:18px;padding:7px 7px 7px 24px;border-radius:999px;background:linear-gradient(135deg,#0b1f4a 0%,#173a78 55%,#2f6fd6 100%);color:#fff;font-weight:600;font-size:1.12rem;line-height:1.2;letter-spacing:.01em;box-shadow:0 12px 26px rgba(11,31,74,.26);transition:box-shadow .3s}
+.bp-go::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,#173a78 0%,#2f6fd6 100%);opacity:0;transition:opacity .3s}
+.bp-card:hover .bp-go::before{opacity:1}
+.bp-card:hover .bp-go{box-shadow:0 16px 32px rgba(47,111,214,.34)}
+.bp-go i{flex:none;width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(135deg,#dcc48d,#c8a96a 55%,#b18f4c);color:#0b1f4a;font-style:normal;font-size:1.3rem;line-height:1;box-shadow:0 4px 12px rgba(0,0,0,.22);transition:transform .3s}
+.bp-card:hover .bp-go i{transform:translateX(4px)}
+[data-theme=dark] .bp-go{background:linear-gradient(135deg,#173a78 0%,#2f6fd6 100%);box-shadow:0 12px 26px rgba(0,0,0,.4)}
+@media(max-width:800px){.brand-pick{grid-template-columns:1fr}.bp-card{padding:24px}}
+
+/* ---------- Tautan antar merek dan remah roti ---------- */
+.brand-switch{text-align:center;margin-top:8px;color:var(--pt-text)}
+.brand-switch a{display:inline-block;margin-left:8px;padding:8px 16px;border-radius:999px;text-decoration:none;font-weight:600;font-size:0.97rem}
+#produk .crumbs{margin-bottom:22px;color:var(--pt-text);font-size:1.04rem}
+#produk .crumbs a{color:var(--pt-blue);text-decoration:none}
+#produk .crumbs span{margin:0 8px;opacity:.5}
+
+/* ---------- Mode gelap ---------- */
+[data-theme=dark] .pcard,[data-theme=dark] .bp-card{background:#0f1e3d !important;border-color:rgba(255,255,255,.12) !important}
+[data-theme=dark] .pcard .pbody{background:#0f1e3d !important}
+[data-theme=dark] .pcard .thumb,[data-theme=dark] .bp-logo{background:linear-gradient(160deg,#16294f 0%,#0d1b38 100%) !important}
+[data-theme=dark] .pcard .pbody h4,[data-theme=dark] .bp-card h2,[data-theme=dark] .pcard dl dd{color:#eef3fc !important}
+[data-theme=dark] .pcard .pbody p,[data-theme=dark] .bp-card p,[data-theme=dark] .brand-switch,[data-theme=dark] #produk .crumbs{color:#a9b8d4 !important}
+[data-theme=dark] .sz{background:rgba(255,255,255,.06) !important;border-color:rgba(255,255,255,.16) !important;color:#c3d2ee !important}
+[data-theme=dark] .sz:hover{background:rgba(255,255,255,.14) !important}
+[data-theme=dark] .sz-open{background:transparent !important;color:#fff !important}
+[data-theme=dark] .bp-models span,[data-theme=dark] .pcard .ptype{color:#9cc2fb !important;background:rgba(90,154,240,.14);border-color:rgba(90,154,240,.35)}
+
+   /* Foto produk memenuhi seluruh kotak (rasio 4:3) */
+   .pcard .thumb{position:relative;padding:0;aspect-ratio:4/3;overflow:hidden}
+   .pcard .thumb>img{position:absolute;inset:0;width:100%;height:100%;max-width:none;margin:0;object-fit:cover;filter:none}
+   .pcard .sz-open{position:absolute;left:14px;right:14px;bottom:14px;width:auto;margin:0;z-index:2}
