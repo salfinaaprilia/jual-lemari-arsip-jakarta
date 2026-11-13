@@ -208,6 +208,8 @@ sm = os.path.join(R, 'sitemap.xml')
 if os.path.exists(sm):
     s = re.sub(r'  <url><loc>[^<]*/produk/[^<]*</loc>.*?</url>\n', '', open(sm, encoding='utf-8').read())
     hari = datetime.date.today().isoformat()
-    baru = ''.join(f'  <url><loc>{DOMAIN}produk/{p["slug"]}.html</loc><lastmod>{hari}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>\n' for p in P)
+    # semua halaman detail yang ada di folder produk/ (Vivorti dan Zeco) masuk sitemap
+    semua = sorted(os.path.splitext(os.path.basename(f))[0] for f in glob.glob(os.path.join(R, 'produk', '*.html')))
+    baru = ''.join(f'  <url><loc>{DOMAIN}produk/{n}.html</loc><lastmod>{hari}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>\n' for n in semua)
     open(sm, 'w', encoding='utf-8').write(s.replace('</urlset>', baru + '</urlset>'))
 print(f'Selesai. Dibuat baru: {len(dibuat)} {dibuat}. Dilewati karena sudah ada (tidak diubah): {len(dilewati)} {dilewati}')
