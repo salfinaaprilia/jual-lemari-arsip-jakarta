@@ -40,7 +40,7 @@ nav = rel(nav).replace('class="navbar"', 'class="navbar scrolled"', 1).replace('
 nav = nav.replace('<a href="../artikel.html">', '<a href="../artikel.html" aria-current="page">', 1)
 # data produk (foto, nama, jenis) dibaca dari kartu produk di index.html
 PR = {m.group(1): dict(img=m.group(2), type=m.group(3), name=m.group(4)) for m in re.finditer(
-    r'<article class="pcard" id="(\w+)">.*?<img src="([^"]+)" alt="[^"]*".*?<span class="ptype">(.*?)</span><h4>(.*?)</h4>', rd('produk-vivorti.html') + rd('produk-zecco.html'), re.S)}
+    r'<article class="pcard" id="(\w+)">.*?<img src="([^"]+)" alt="[^"]*".*?<span class="ptype">(.*?)</span><h2>(.*?)</h2>', rd('produk-vivorti.html') + rd('produk-zecco.html'), re.S)}
 def prods(a): return [dict(PR[i], id=i) for i in a.get('produk', []) if i in PR]
 foot = rel(re.search(r'<footer class="footer">.*?</footer>', index, re.S).group(0))
 

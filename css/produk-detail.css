@@ -34,10 +34,10 @@
 .d-info>p{font-size:1.16rem;color:var(--muted);font-weight:400;margin-bottom:28px;max-width:60ch}
 .d-spec{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:4px;margin-bottom:28px}
 .d-spec div{padding:18px 20px;border-left:1px solid var(--line)}.d-spec div:first-child{border-left:0}
-.d-spec dt{font-size:0.94rem;color:var(--gold-d);letter-spacing:.06em}.d-spec dd{font-weight:500;font-size:1.1rem}
+.d-spec dt{font-size:0.94rem;color:var(--gold-teks);letter-spacing:.06em}.d-spec dd{font-weight:500;font-size:1.1rem}
 .d-act{display:flex;flex-wrap:wrap;gap:12px;padding-bottom:28px;margin-bottom:24px;border-bottom:1px solid var(--line)}
 .d-ok{list-style:none;display:grid;gap:10px;color:var(--muted);font-weight:400}
-.d-ok li{display:flex;gap:12px;align-items:center}.d-ok li::before{content:"\2713";color:var(--gold-d);font-weight:600}
+.d-ok li{display:flex;gap:12px;align-items:center}.d-ok li::before{content:"\2713";color:var(--gold-teks);font-weight:600}
 
 /* Detail produk dan pilihan 10 ukuran */
 .d-more{padding:clamp(48px,6vw,80px) 0;border-top:1px solid var(--line)}
@@ -45,7 +45,7 @@
 .d-h{font-size:1.89rem;line-height:1.2;letter-spacing:-.02em;font-weight:800;color:#0b1f4a;font-family:'Manrope','Poppins',sans-serif;margin-bottom:18px}
 .d-note{color:var(--muted);font-weight:400;font-size:1.01rem;margin:-6px 0 18px}
 .d-table div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-top:1px solid var(--line)}
-.d-table dt{font-size:0.94rem;color:var(--gold-d);letter-spacing:.06em}.d-table dd{font-weight:500;text-align:right}
+.d-table dt{font-size:0.94rem;color:var(--gold-teks);letter-spacing:.06em}.d-table dd{font-weight:500;text-align:right}
 .d-sizes{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
 .d-sz{display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px 6px 12px;border:1px solid var(--line);border-radius:4px;background:#fff;color:inherit;font:inherit;cursor:pointer;transition:border-color .2s,background .2s}
 .d-sz:hover{border-color:var(--gold)}
@@ -94,12 +94,12 @@ body:has(dialog[open]){overflow:hidden}
   .d-sizes{grid-template-columns:repeat(2,1fr)}
 }
 /* Tombol kembali ke halaman produk merek (Vivorti / Zecco) */
-.d-back{display:inline-flex;align-items:center;gap:12px;margin:0 0 24px;padding:6px 24px 6px 6px;border-radius:999px;background:linear-gradient(135deg,#0b1f4a 0%,#173a78 55%,#2f6fd6 100%);color:#fff;font-weight:600;font-size:.95rem;line-height:1.2;letter-spacing:.01em;box-shadow:0 10px 24px rgba(11,31,74,.24);transition:transform .25s ease,box-shadow .25s ease}
+.d-back{display:inline-flex;align-items:center;gap:12px;margin:0 0 24px;padding:6px 24px 6px 6px;border-radius:999px;background:linear-gradient(135deg,#0b1f4a 0%,#173a78 55%,#2a64c4 100%);color:#fff;font-weight:600;font-size:.95rem;line-height:1.2;letter-spacing:.01em;box-shadow:0 10px 24px rgba(11,31,74,.24);transition:transform .25s ease,box-shadow .25s ease}
 .d-back i{flex:none;width:36px;height:36px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(135deg,#dcc48d,#c8a96a 55%,#b18f4c);color:#0b1f4a;font-style:normal;font-size:1.2rem;line-height:1;box-shadow:0 4px 10px rgba(0,0,0,.22);transition:transform .25s ease}
 .d-back:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(47,111,214,.32)}
 .d-back:hover i{transform:translateX(-4px)}
 .d-back:focus-visible{outline:2px solid #c8a96a;outline-offset:3px}
-[data-theme=dark] .d-back{background:linear-gradient(135deg,#173a78 0%,#2f6fd6 100%)}
+[data-theme=dark] .d-back{background:linear-gradient(135deg,#173a78 0%,#2a64c4 100%)}
 
 /* ===== Halaman detail produk (desain baru, sama seperti situs kursi sekolah) =====
    Kartu putih dua kolom: foto di kiri, nama + tabel spesifikasi + tombol di kanan. */
@@ -109,15 +109,15 @@ body.pd-page .navbar{background:rgba(255,255,255,.96);-webkit-backdrop-filter:bl
 [data-theme] body.pd-page .navbar .menu-toggle span{background:#0b1f4a!important}
 @media(min-width:901px){
   [data-theme] body.pd-page .navbar .nav-menu>a:not(.btn),[data-theme] body.pd-page .navbar .dropdown-btn,[data-theme] body.pd-page .navbar .brand{color:#0b1f4a!important}
-  [data-theme] body.pd-page .navbar .nav-menu>a:not(.btn):hover,[data-theme] body.pd-page .navbar .dropdown-btn:hover{color:#a98548!important}
-  [data-theme] body.pd-page .navbar .nav-menu a[aria-current=page]{color:#a98548!important}
+  [data-theme] body.pd-page .navbar .nav-menu>a:not(.btn):hover,[data-theme] body.pd-page .navbar .dropdown-btn:hover{color:#8a6a2f!important}
+  [data-theme] body.pd-page .navbar .nav-menu a[aria-current=page]{color:#8a6a2f!important}
 }
 .pd{padding:clamp(112px,11vw,140px) 0 clamp(64px,8vw,96px);background:linear-gradient(180deg,#f6f9fd 0%,#fff 60%)}
 .pd .wrap{max-width:calc(1200px + 2 * var(--pad,24px));margin-inline:auto}
 .pd-crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 22px;color:#64748b;font:600 13px/1.6 'Poppins',sans-serif}
 .pd-crumbs a{color:#64748b;text-decoration:none;transition:color .2s ease}
-.pd-crumbs a:hover{color:#2f6fd6}
-.pd-crumbs span{color:#b4bfd2}
+.pd-crumbs a:hover{color:#2a64c4}
+.pd-crumbs span{color:#64748b}
 .pd-crumbs [aria-current]{color:#334155}
 .pd-grid{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1fr);gap:clamp(24px,3vw,36px);align-items:stretch;padding:24px;border:1px solid #e6ecf5;border-radius:30px;background:#fff;box-shadow:0 6px 18px -10px rgba(15,23,42,.14)}
 .pd-media{margin:0;display:flex;flex-direction:column}
@@ -127,11 +127,11 @@ body.pd-page .navbar{background:rgba(255,255,255,.96);-webkit-backdrop-filter:bl
 .pd-thumbs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:12px}
 .pd-th{display:flex;flex-direction:column;gap:6px;padding:0;border:0;background:none;cursor:pointer;font:500 12px/1.3 'Poppins',sans-serif;color:#64748b;text-align:center}
 .pd-th img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;border:2px solid #e6ecf5;background:#fff;transition:border-color .2s ease}
-.pd-th[aria-pressed=true] img{border-color:#2f6fd6}
+.pd-th[aria-pressed=true] img{border-color:#2a64c4}
 .pd-th:hover img{border-color:#9dbcf0}
-.pd-th:focus-visible{outline:2px solid #2f6fd6;outline-offset:3px;border-radius:12px}
+.pd-th:focus-visible{outline:2px solid #2a64c4;outline-offset:3px;border-radius:12px}
 .pd-body{padding:12px 0}
-.pd-type{display:inline-block;margin-bottom:10px;color:#2f6fd6;font:700 12.5px/1.3 'Poppins',sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.pd-type{display:inline-block;margin-bottom:10px;color:#2a64c4;font:700 12.5px/1.3 'Poppins',sans-serif;letter-spacing:.14em;text-transform:uppercase}
 .pd-name{margin:0;color:#0f172a;font:800 clamp(28px,2.7vw,36px)/1.18 'Manrope','Poppins',sans-serif;letter-spacing:-.022em}
 .pd-desc{margin:12px 0 0;color:#526581;font-size:15.5px;line-height:1.75}
 .pd-table-wrap{margin:22px 0 0;border:1px solid #dce7f8;border-radius:13px;overflow:hidden}
@@ -147,7 +147,7 @@ body.pd-page .navbar{background:rgba(255,255,255,.96);-webkit-backdrop-filter:bl
 .pd-btn:hover i{transform:translateX(4px)}
 .pd-btn:focus-visible{outline:2px solid #0b1f4a;outline-offset:3px}
 .pd-back{align-self:center;color:#526581;font:500 14px/1.4 'Poppins',sans-serif;text-decoration:none}
-.pd-back:hover{color:#2f6fd6}
+.pd-back:hover{color:#2a64c4}
 @media(max-width:900px){
   .pd-grid{grid-template-columns:1fr;padding:16px;border-radius:24px}
   .pd-view{flex:none;min-height:0;aspect-ratio:5/6;max-height:70vh}

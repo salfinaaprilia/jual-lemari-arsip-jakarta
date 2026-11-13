@@ -4,39 +4,8 @@
 })();
 
 // ===== GAYA HERO SEMUA HALAMAN =====
-// Gerak zoom halus dan gaya teks hero. Foto hero tiap halaman diatur lewat atribut data-bg di HTML:
-// Beranda = bg/hero-beranda.webp, Produk = bg/produk-1.jpg, Vivorti = bg/hero-vivorti.webp, Zeco = bg/hero-zeco.webp.
-(function () {
+// Dipindah ke akhir css/style.css (bagian "Gaya hero semua halaman") supaya langsung tampil tanpa menunggu skrip.
 
-  const css = document.createElement('style');
-  css.textContent = `
-html .hero[data-bg] .bg-slides,html .a-hero[data-bg] .bg-slides{background:#e8f1ff}
-html .hero[data-bg] .bg-slides span,html .a-hero[data-bg] .bg-slides span{
-  background-size:cover;background-position:right center;
-  filter:brightness(1.35) saturate(1.1) contrast(.95);transform:scale(1.02);
-  animation:cmHeroZoom 22s ease-in-out infinite alternate}
-@keyframes cmHeroZoom{from{transform:scale(1.02)}to{transform:scale(1.08)}}
-@media(prefers-reduced-motion:reduce){html .hero[data-bg] .bg-slides span,html .a-hero[data-bg] .bg-slides span{animation:none}}
-html .hero[data-bg]::before,html .hero.home[data-bg]::before,html .a-hero[data-bg]::before{
-  background:
-    linear-gradient(90deg,rgba(54,124,230,.80) 0%,rgba(84,148,240,.58) 42%,rgba(150,195,250,.10) 100%),
-    linear-gradient(0deg,rgba(235,244,255,.55) 0%,transparent 38%)}
-html .hero[data-bg] h1,html .a-hero[data-bg] h1{color:#fff;text-shadow:0 2px 16px rgba(25,70,160,.35)}
-html .hero[data-bg] p,html .a-hero[data-bg] .meta{color:#fff;text-shadow:0 1px 12px rgba(25,70,160,.35)}
-html .hero[data-bg] .btn-ghost{background:rgba(255,255,255,.14);box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)}
-html .hero[data-bg] .btn-ghost:hover{background:#fff;color:#367ce6}
-html .a-hero[data-bg]{border-bottom:2px solid #c8a96a}
-html .a-hero[data-bg] .crumbs,html .a-hero[data-bg] .crumbs a{color:#fff}
-html .a-hero[data-bg] .crumbs span{opacity:.8}
-html .a-hero[data-bg] .tag{color:#fff;border-color:rgba(255,255,255,.8);background:rgba(255,255,255,.14)}
-@media(max-width:900px){
-  html .hero[data-bg] .bg-slides span,html .a-hero[data-bg] .bg-slides span{background-position:78% center}
-  html .hero[data-bg]::before,html .hero.home[data-bg]::before,html .a-hero[data-bg]::before{
-    background:linear-gradient(180deg,rgba(54,124,230,.78),rgba(110,166,244,.60))}
-}`;
-  document.head.appendChild(css);
-  // Foto hero TIDAK lagi diseragamkan: tiap halaman memakai fotonya sendiri dari atribut data-bg di HTML.
-})();
 
 // ===== FOOTER SEMUA HALAMAN =====
 // Tiga kolom: perusahaan (logo + deskripsi), Informasi Perusahaan, Kontak Kami.
@@ -82,15 +51,15 @@ footer.footer.ft .ft-logo img{height:56px;width:auto;display:block}
 footer.footer.ft .ft-brand p{margin:16px 0 0;max-width:320px;color:#5f6f88;line-height:1.75}
 footer.footer.ft h2{margin:0 0 16px;color:#0b1f4a;font:700 13px/1.3 Poppins,sans-serif;letter-spacing:.14em;text-transform:uppercase}
 footer.footer.ft .ft-list a{display:block;padding:5px 0;color:#5f6f88;text-decoration:none;transition:color .2s ease}
-footer.footer.ft .ft-list a:hover{color:#2f6fd6}
+footer.footer.ft .ft-list a:hover{color:#2a64c4}
 footer.footer.ft .ft-alamat{margin:0 0 10px;color:#5f6f88;line-height:1.7}
-footer.footer.ft .ft-kontak a{color:#2f6fd6;text-decoration:none;font-weight:500}
+footer.footer.ft .ft-kontak a{color:#2a64c4;text-decoration:none;font-weight:500}
 footer.footer.ft .ft-kontak a:hover{color:#0b1f4a}
 footer.footer.ft .ft-kontak .ft-telp{display:block;margin-bottom:12px;color:#0b1f4a;font:700 17px/1.3 'Manrope','Poppins',sans-serif}
 footer.footer.ft .ft-bar{border-top:1px solid #e3eaf4;padding:18px 0}
-footer.footer.ft .ft-bar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px;color:#8a97ad;font-size:14px}
+footer.footer.ft .ft-bar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px;color:#64748b;font-size:14px}
 footer.footer.ft .ft-bar a{color:#5f6f88;text-decoration:none}
-footer.footer.ft .ft-bar a:hover{color:#2f6fd6}
+footer.footer.ft .ft-bar a:hover{color:#2a64c4}
 @media(max-width:900px){
   footer.footer.ft .ft-grid{grid-template-columns:1fr 1fr}
   footer.footer.ft .ft-brand{grid-column:1/-1}

@@ -12,7 +12,7 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 }));
 // Header berubah jadi putih setelah halaman digulir sedikit
 const gulir = () => nav.classList.toggle('scrolled', scrollY > 10);
-addEventListener('scroll', gulir, {passive: true}); gulir();
+addEventListener('scroll', gulir, {passive: true}); requestAnimationFrame(gulir);
 
 // ===== Daftar artikel (halaman artikel.html) =====
 // Sumber data: js/articles.js. Semua artikel tampil sebagai kartu seragam, urut dari yang terbaru. Tiap kartu menuju artikel/slug.html

@@ -9,8 +9,8 @@
 .ad-hero{padding:clamp(108px,10vw,136px) 0 0;background:#fff}
 .ad-crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 clamp(28px,3.5vw,48px);color:#64748b;font:600 13px/1.6 'Poppins',sans-serif}
 .ad-crumbs a{color:#64748b;text-decoration:none;transition:color .2s ease}
-.ad-crumbs a:hover{color:#2f6fd6}
-.ad-crumbs span{color:#b4bfd2}
+.ad-crumbs a:hover{color:#2a64c4}
+.ad-crumbs span{color:#64748b}
 .ad-crumbs [aria-current]{color:#334155;font-weight:600}
 .ad-head{max-width:860px}
 .ad-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin-bottom:16px;color:#64748b;font:400 14px/1.6 'Poppins',sans-serif}
@@ -33,7 +33,7 @@
 .ad-toc li a{display:block;margin-left:-2px;padding:8px 0 8px 18px;border-left:2px solid transparent;color:#64748b;font:400 14px/1.5 'Poppins',sans-serif;text-decoration:none;transition:color .2s ease,border-color .2s ease}
 .ad-toc li a:hover,.ad-toc li a.is-active{color:#0b1f4a;border-left-color:#d4b26a;font-weight:600}
 .ad-back{display:inline-block;margin-top:24px;padding-top:20px;border-top:1px solid #e6ecf5;color:#475569;font:600 14px/1.6 'Poppins',sans-serif;text-decoration:none}
-.ad-back:hover{color:#2f6fd6}
+.ad-back:hover{color:#2a64c4}
 
 /* ---- Artikel Terkait ---- */
 .ad-relwrap{margin-top:clamp(56px,7vw,96px);padding:clamp(48px,6vw,80px) 0;background:#f4f8ff;border-top:1px solid #e6ecf5}

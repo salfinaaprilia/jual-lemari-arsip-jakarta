@@ -1,5 +1,5 @@
 :root{--night:#050d1f;--navy:#0b1f4a;--blue:#1d4a9a;--sky:#8fb4ee;--ivory:#f6f8fc;--line:#e2e8f2;--ink:#0b1730;--muted:#434f6b;
-  --gold:#c8a96a;--gold-d:#a98548;--r:6px;--pad:clamp(24px,6vw,110px)}
+  --gold:#c8a96a;--gold-d:#a98548;--gold-teks:#8a6a2f;--r:6px;--pad:clamp(24px,6vw,110px)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:96px;font-size:100%}
 /* Ukuran dasar font 16px (standar browser). Semua ukuran rem dihitung dari sini. */
@@ -22,13 +22,13 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}button{fon
 .nav-menu>a:not(.btn):hover,.dropdown-btn:hover{color:var(--gold)}
 .navbar.scrolled .brand{color:var(--navy)}
 .navbar.scrolled .nav-menu>a:not(.btn),.navbar.scrolled .dropdown-btn{color:#2c3d63}
-.navbar.scrolled .nav-menu>a:not(.btn):hover,.navbar.scrolled .dropdown-btn:hover{color:var(--gold-d)}
+.navbar.scrolled .nav-menu>a:not(.btn):hover,.navbar.scrolled .dropdown-btn:hover{color:var(--gold-teks)}
 .dropdown{position:relative}
 .dropdown-btn{background:none;border:0;font:inherit;cursor:pointer;display:flex;align-items:center;gap:6px}
 .dropdown-list{position:absolute;top:100%;left:-16px;min-width:170px;padding:8px;background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:0 24px 50px rgba(5,13,31,.18);opacity:0;visibility:hidden;transform:translateY(6px);transition:.2s}
 .dropdown:hover .dropdown-list,.dropdown:focus-within .dropdown-list{opacity:1;visibility:visible;transform:none}
 .dropdown-list a{display:block;padding:10px 14px;border-radius:4px;color:var(--ink)}
-.dropdown-list a:hover{background:var(--ivory);color:var(--gold-d)}
+.dropdown-list a:hover{background:var(--ivory);color:var(--gold-teks)}
 .menu-toggle{display:none;background:none;border:0;cursor:pointer;padding:6px}
 .menu-toggle span{display:block;width:24px;height:2px;margin:6px 0;background:#fff;transition:background .3s}
 .navbar.scrolled .menu-toggle span{background:var(--navy)}
@@ -91,7 +91,7 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}button{fon
 .pinfo p{color:var(--muted);margin:14px 0 28px;font-weight:400}
 .pinfo dl{display:grid;grid-template-columns:1fr 1fr;gap:0 28px;margin-bottom:36px}
 .pinfo dl div{padding:16px 0;border-top:1px solid var(--line)}
-.pinfo dt{font-size:0.94rem;color:var(--gold-d);letter-spacing:.06em}.pinfo dd{font-weight:500;font-size:1.04rem}
+.pinfo dt{font-size:0.94rem;color:var(--gold-teks);letter-spacing:.06em}.pinfo dd{font-weight:500;font-size:1.04rem}
 
 .services{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-bottom:48px}
 .services div{padding:34px 34px 34px;border-left:1px solid var(--line)}
@@ -102,7 +102,7 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}button{fon
 .bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(230px,auto);gap:20px}
 .tile{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:32px;display:flex;flex-direction:column;justify-content:flex-end;transition:box-shadow .3s,transform .3s}
 .tile:hover{transform:translateY(-4px);box-shadow:0 26px 48px rgba(11,31,74,.12)}
-.tile .tag{margin-bottom:auto;align-self:flex-start;font-size:0.94rem;letter-spacing:.06em;font-weight:500;color:var(--gold-d);border:1px solid var(--line);padding:3px 12px;border-radius:3px}
+.tile .tag{margin-bottom:auto;align-self:flex-start;font-size:0.94rem;letter-spacing:.06em;font-weight:500;color:var(--gold-teks);border:1px solid var(--line);padding:3px 12px;border-radius:3px}
 .tile strong{font-size:2.83rem;font-weight:500;letter-spacing:-.035em;line-height:1;color:var(--navy);margin-top:24px}
 .tile h3{font-size:1.1rem;font-weight:500;margin:6px 0}.tile p{font-size:0.95rem;color:var(--muted);font-weight:400}
 .t-big{grid-column:span 2;grid-row:span 2;background:radial-gradient(circle at 80% 10%,#2a539f,#0b1f4a 60%,#050d1f);border:0;color:#fff}
@@ -119,7 +119,7 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}button{fon
 .art h2,.art h3{font-size:1.26rem;line-height:1.4;letter-spacing:-.01em;font-weight:500;color:var(--navy)}
 .art p{font-size:0.97rem;color:var(--muted);margin:10px 0 18px;font-weight:400}
 .art .meta{margin-top:auto;font-size:0.94rem;color:var(--muted);display:flex;justify-content:space-between}
-.art .meta b{color:var(--gold-d);font-weight:600}
+.art .meta b{color:var(--gold-teks);font-weight:600}
 .art.feat{grid-row:span 2}.art.feat .cover{min-height:260px}.art.feat h2,.art.feat h3{font-size:1.89rem}
 .art.feat .cover::after{width:92px;height:120px;top:26px;right:34px}
 
@@ -128,7 +128,7 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}button{fon
 .faq details{border-top:1px solid var(--line);padding:24px 0}.faq details:last-child{border-bottom:1px solid var(--line)}
 .faq summary{cursor:pointer;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:16px}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";color:var(--gold-d);font-size:1.77rem;line-height:1}
+.faq summary::after{content:"+";color:var(--gold-teks);font-size:1.77rem;line-height:1}
 .faq details[open] summary::after{content:"\2212"}
 .faq p{color:var(--muted);margin-top:10px;font-size:1.02rem;font-weight:400}
 
@@ -141,7 +141,7 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}button{fon
 .cinfo p{color:var(--muted);margin:16px 0 32px;font-weight:400}
 .cinfo ul{list-style:none}.cinfo li{display:flex;flex-direction:column;padding:18px 0;border-top:1px solid var(--line)}
 .cinfo li:last-child{border-bottom:1px solid var(--line)}
-.cinfo li b{font-size:0.94rem;color:var(--gold-d);font-weight:500;letter-spacing:.06em}.cinfo li span{font-weight:500}
+.cinfo li b{font-size:0.94rem;color:var(--gold-teks);font-weight:500;letter-spacing:.06em}.cinfo li span{font-weight:500}
 .contact{background:var(--ivory);border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:var(--r);padding:40px;display:grid;gap:18px;box-shadow:0 30px 60px rgba(11,31,74,.06)}
 .contact label{display:grid;gap:6px;font-size:0.94rem;font-weight:500;color:var(--navy);letter-spacing:.02em}
 .contact input,.contact select,.contact textarea{width:100%;padding:13px 16px;border:1px solid var(--line);border-radius:3px;font:inherit;font-weight:400;background:#fff;color:var(--ink)}
@@ -181,11 +181,11 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}button{fon
 .thumb{background:radial-gradient(circle at 50% 38%,#2a539f 0%,#0b1f4a 55%,#050d1f 100%);padding:28px 20px 20px;display:flex;justify-content:center;align-items:flex-end}
 .thumb img{height:290px;width:auto;filter:drop-shadow(0 22px 20px rgba(0,0,0,.5));transition:transform .4s}.pcard:hover .thumb img{transform:translateY(-6px) scale(1.03)}
 .pbody{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1}
-.ptype{align-self:flex-start;font-size:0.94rem;letter-spacing:.06em;font-weight:500;color:var(--gold-d);border:1px solid var(--line);padding:3px 12px;border-radius:3px;margin-bottom:12px}
-.pbody h4{font-size:1.25rem;line-height:1.2;letter-spacing:-.02em;font-weight:500;color:var(--navy)}
+.ptype{align-self:flex-start;font-size:0.94rem;letter-spacing:.06em;font-weight:500;color:var(--gold-teks);border:1px solid var(--line);padding:3px 12px;border-radius:3px;margin-bottom:12px}
+.pbody h2{font-size:1.25rem;line-height:1.2;letter-spacing:-.02em;font-weight:500;color:var(--navy)}
 .pbody p{font-size:0.99rem;color:var(--muted);font-weight:400;margin:8px 0 16px}
 .pbody dl{display:grid;grid-template-columns:1fr 1fr;gap:0 16px;margin-bottom:22px}.pbody dl div{padding:10px 0;border-top:1px solid var(--line)}.pbody dl .full{grid-column:span 2}
-.pbody dt{font-size:0.94rem;color:var(--gold-d);letter-spacing:.06em}.pbody dd{font-weight:500;font-size:0.97rem}
+.pbody dt{font-size:0.94rem;color:var(--gold-teks);letter-spacing:.06em}.pbody dd{font-weight:500;font-size:0.97rem}
 .pbody .btn{margin-top:auto;text-align:center}
 
 @media(max-width:1200px){.pgrid{grid-template-columns:repeat(2,1fr)}}
@@ -235,7 +235,7 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}button{fon
 
 /* Font: Manrope untuk semua judul (h1-h6), Poppins untuk teks isi */
 h1,h2,h3,h4,h5,h6{font-family:'Manrope','Poppins',system-ui,sans-serif}
-.head h2,.hero h1,.a-hero h1,.a-body h2,.art h2,.art h3,.pbody h4{font-weight:600}
+.head h2,.hero h1,.a-hero h1,.a-body h2,.art h2,.art h3,.pbody h2{font-weight:600}
 
 /* Artikel di beranda: kartu besar (terbaru) di atas, artikel sebelumnya di bawah */
 .articles{display:block}
@@ -339,7 +339,7 @@ html.tswap *,html.tswap *::before,html.tswap *::after{transition:background-colo
 [data-theme=dark] .navbar.scrolled .menu-toggle span{background:#fff}
 [data-theme=dark] .navbar.scrolled .logo-dark{display:none}[data-theme=dark] .navbar.scrolled .logo-light{display:block}
 [data-theme=dark] .facts{border-bottom:1px solid rgba(255,255,255,.08)}
-[data-theme=dark] :is(.head h2,.cinfo h2,.pinfo h3,.services h3,.tile strong,.art h2,.art h3,.pbody h4,.contact label,.r-body h2,.r-body h3,.a-body h2,.a-more h2,.older-title,.a-side .a-cta h2){color:#f2f6ff}
+[data-theme=dark] :is(.head h2,.cinfo h2,.pinfo h3,.services h3,.tile strong,.art h2,.art h3,.pbody h2,.contact label,.r-body h2,.r-body h3,.a-body h2,.a-more h2,.older-title,.a-side .a-cta h2){color:#f2f6ff}
 [data-theme=dark] :is(.tile,.art,.pcard,.dropdown-list,.r-foot,.reader){background:#0c1a36}
 [data-theme=dark] .t-big{background:radial-gradient(circle at 80% 10%,#2a539f,#0b1f4a 60%,#050d1f)}
 [data-theme=dark] :is(.a-body,.r-body) p{color:#b7c6e4}
@@ -620,10 +620,10 @@ html.tswap *,html.tswap *::before,html.tswap *::after{transition:background-colo
   [data-theme=light] .navbar.scrolled .prefs,
   [data-theme=light] .navbar.scrolled .brand{color:#000!important}
   [data-theme=light] .navbar.scrolled .nav-menu>a:not(.btn):hover,
-  [data-theme=light] .navbar.scrolled .dropdown-btn:hover{color:var(--gold-d)!important}
+  [data-theme=light] .navbar.scrolled .dropdown-btn:hover{color:var(--gold-teks)!important}
   /* halaman yang sedang dibuka tetap bertanda emas */
   [data-theme=light] .navbar .nav-menu a[aria-current=page]{color:var(--gold)!important}
-  [data-theme=light] .navbar.scrolled .nav-menu a[aria-current=page]{color:var(--gold-d)!important}
+  [data-theme=light] .navbar.scrolled .nav-menu a[aria-current=page]{color:var(--gold-teks)!important}
 }
 /* Tombol menu (HP): putih di atas, hitam setelah digulir */
 [data-theme=light] .navbar:not(.scrolled) .menu-toggle span{background:#fff!important}
@@ -633,7 +633,7 @@ html.tswap *,html.tswap *::before,html.tswap *::after{transition:background-colo
 /* Halaman detail produk: pita atasnya gelap, jadi menu dibuat putih supaya huruf hitamnya terbaca */
 [data-theme=light] body:has(.d-top) .navbar{background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom-color:var(--line);box-shadow:0 8px 30px rgba(5,13,31,.06)}
 [data-theme=light] body:has(.d-top) .navbar .logo-light{display:none}
-@media(min-width:901px){[data-theme=light] body:has(.d-top) .navbar .nav-menu>a:not(.btn),[data-theme=light] body:has(.d-top) .navbar .dropdown-btn,[data-theme=light] body:has(.d-top) .navbar .prefs{color:#000!important}[data-theme=light] body:has(.d-top) .navbar .nav-menu a[aria-current=page]{color:var(--gold-d)!important}}
+@media(min-width:901px){[data-theme=light] body:has(.d-top) .navbar .nav-menu>a:not(.btn),[data-theme=light] body:has(.d-top) .navbar .dropdown-btn,[data-theme=light] body:has(.d-top) .navbar .prefs{color:#000!important}[data-theme=light] body:has(.d-top) .navbar .nav-menu a[aria-current=page]{color:var(--gold-teks)!important}}
 [data-theme=light] body:has(.d-top) .navbar .menu-toggle span{background:#000!important}
 [data-theme=light] body:has(.d-top) .navbar .logo-dark{display:block}
 
@@ -660,9 +660,9 @@ footer.footer.ft .ft-brand p{font-weight:400!important}
   [data-theme=light] body.tanpa-hero .navbar .prefs,
   [data-theme=light] body.tanpa-hero .navbar .brand{color:#000!important}
   [data-theme=light] body.tanpa-hero .navbar .nav-menu>a:not(.btn):hover,
-  [data-theme=light] body.tanpa-hero .navbar .dropdown-btn:hover{color:var(--gold-d)!important}
+  [data-theme=light] body.tanpa-hero .navbar .dropdown-btn:hover{color:var(--gold-teks)!important}
   /* halaman yang sedang dibuka tetap bertanda emas tua */
-  [data-theme=light] body.tanpa-hero .navbar .nav-menu a[aria-current=page]{color:var(--gold-d)!important}
+  [data-theme=light] body.tanpa-hero .navbar .nav-menu a[aria-current=page]{color:var(--gold-teks)!important}
 }
 [data-theme=light] body.tanpa-hero .navbar .menu-toggle span{background:#000!important}
 
@@ -670,7 +670,7 @@ footer.footer.ft .ft-brand p{font-weight:400!important}
    Label kecil biru kapital, judul Manrope tebal biru tua, paragraf pengantar.
    Dipakai di judul halaman Portofolio, Artikel, Kontak, dan sub-judul halaman lain. */
 .sec-head{max-width:calc(760px + 2 * var(--pad,24px)); margin:0 auto clamp(32px,4vw,48px); padding:0 var(--pad,24px); text-align:center}
-.sec-kicker{display:block; margin:0 0 14px; color:#2f6fd6; font:700 12.5px/1.2 'Poppins',sans-serif; letter-spacing:.18em; text-transform:uppercase}
+.sec-kicker{display:block; margin:0 0 14px; color:#2a64c4; font:700 12.5px/1.2 'Poppins',sans-serif; letter-spacing:.18em; text-transform:uppercase}
 .sec-head h1,.sec-head h2{margin:0 0 14px; color:#0b1f4a; font:800 clamp(26px,2.6vw,40px)/1.2 'Manrope','Poppins',sans-serif; letter-spacing:-.02em}
 .sec-head p{margin:0 auto; max-width:640px; color:#5f6f88; font-size:17px; line-height:1.85}
 @media(prefers-reduced-motion:no-preference){.sec-head{animation:cm-naik .9s cubic-bezier(.2,.8,.2,1) .1s backwards}}
@@ -703,3 +703,45 @@ html .hero[data-bg] .bg-slides span{filter:saturate(1.05)!important}
 
 /* ===== Menu dropdown Produk: kotak menyesuaikan panjang label (satu baris) ===== */
 @media(min-width:901px){.dropdown-list{min-width:max-content}.dropdown-list a{white-space:nowrap}}
+
+/* Menu header di tengah (laptop): logo kiri, menu tengah, tombol Konsultasi kanan */
+@media(min-width:901px){
+  .nav-inner{--nav-sisi:250px}
+  .navbar .brand{width:var(--nav-sisi)}
+  .nav-menu{flex:1;padding-left:36px} /* imbangi jarak (gap) sebelum tombol Konsultasi */
+  .nav-menu>a:first-child{margin-left:auto}
+  .nav-menu>.btn-sm{margin-left:auto;min-width:var(--nav-sisi);justify-content:center;text-align:center}
+}
+@media(min-width:901px) and (max-width:1200px){.nav-inner{--nav-sisi:214px}.nav-menu{padding-left:14px}}
+/* tombol Konsultasi disembunyikan di 901-1000px: sisakan ruang kosong selebar logo agar menu tetap di tengah */
+@media(min-width:901px) and (max-width:1000px){.nav-menu{padding-left:0;padding-right:var(--nav-sisi)}.nav-menu>.dropdown:last-of-type{margin-right:auto}.nav-menu>a:nth-last-child(2){margin-right:auto}}
+
+/* ===== Gaya hero semua halaman (dulu disisipkan oleh js/prefs.js) =====
+   Foto hero tiap halaman diatur lewat atribut data-bg di HTML. */
+html .hero[data-bg] .bg-slides,html .a-hero[data-bg] .bg-slides{background:#e8f1ff}
+html .hero[data-bg] .bg-slides span,html .a-hero[data-bg] .bg-slides span{
+  background-size:cover;background-position:right center;
+  filter:brightness(1.35) saturate(1.1) contrast(.95);transform:scale(1.02);
+  animation:cmHeroZoom 22s ease-in-out infinite alternate}
+@keyframes cmHeroZoom{from{transform:scale(1.02)}to{transform:scale(1.08)}}
+@media(prefers-reduced-motion:reduce){html .hero[data-bg] .bg-slides span,html .a-hero[data-bg] .bg-slides span{animation:none}}
+html .hero[data-bg]::before,html .hero.home[data-bg]::before,html .a-hero[data-bg]::before{
+  background:
+    linear-gradient(90deg,rgba(54,124,230,.80) 0%,rgba(84,148,240,.58) 42%,rgba(150,195,250,.10) 100%),
+    linear-gradient(0deg,rgba(235,244,255,.55) 0%,transparent 38%)}
+html .hero[data-bg] h1,html .a-hero[data-bg] h1{color:#fff;text-shadow:0 2px 16px rgba(25,70,160,.35)}
+html .hero[data-bg] p,html .a-hero[data-bg] .meta{color:#fff;text-shadow:0 1px 12px rgba(25,70,160,.35)}
+html .hero[data-bg] .btn-ghost{background:rgba(255,255,255,.14);box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)}
+html .hero[data-bg] .btn-ghost:hover{background:#fff;color:#367ce6}
+html .a-hero[data-bg]{border-bottom:2px solid #c8a96a}
+html .a-hero[data-bg] .crumbs,html .a-hero[data-bg] .crumbs a{color:#fff}
+html .a-hero[data-bg] .crumbs span{opacity:.8}
+html .a-hero[data-bg] .tag{color:#fff;border-color:rgba(255,255,255,.8);background:rgba(255,255,255,.14)}
+@media(max-width:900px){
+  html .hero[data-bg] .bg-slides span,html .a-hero[data-bg] .bg-slides span{background-position:78% center}
+  html .hero[data-bg]::before,html .hero.home[data-bg]::before,html .a-hero[data-bg]::before{
+    background:linear-gradient(180deg,rgba(54,124,230,.78),rgba(110,166,244,.60))}
+}
+/* Foto hero berupa <img> (beranda): memenuhi bidang seperti latar */
+html .hero[data-bg] .bg-slides span img,html .a-hero[data-bg] .bg-slides span img{display:block;width:100%;height:100%;object-fit:cover;object-position:right center}
+@media(max-width:900px){html .hero[data-bg] .bg-slides span img,html .a-hero[data-bg] .bg-slides span img{object-position:78% center}}

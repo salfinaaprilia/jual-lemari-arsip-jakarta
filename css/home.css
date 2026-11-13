@@ -6,7 +6,7 @@
 
 .cm-sec{
   --ink:#22314a; --muted:#5f6f88;
-  --blue:#2f6fd6; --blue-d:#2459b3; --on-blue:#fff;
+  --blue:#2a64c4; --blue-d:#2459b3; --on-blue:#fff;
   --tint:#eaf2fd; --tint2:#f4f8fe; --line:#dbe6f4;
   --card:#fff; --shadow:0 14px 34px rgba(47,111,214,.10);
   position:relative; overflow:hidden; font-family:Poppins,system-ui,sans-serif;
@@ -93,7 +93,7 @@
   background:#eef4fd; color:var(--blue); font:700 14px/1 'Manrope','Poppins',sans-serif; letter-spacing:.06em; font-variant-numeric:tabular-nums;
   transition:background .45s ease, color .45s ease;
 }
-#ruang-kerja .sc-item h3{margin:8px 0 0; color:var(--navy); font:700 clamp(19px,1.6vw,22px)/1.3 'Manrope','Poppins',sans-serif; letter-spacing:-.015em; transition:color .45s ease}
+#ruang-kerja .sc-item .sc-judul{display:block; margin:8px 0 0; color:var(--navy); font:700 clamp(19px,1.6vw,22px)/1.3 'Manrope','Poppins',sans-serif; letter-spacing:-.015em; transition:color .45s ease}
 #ruang-kerja .sc-item p{max-width:46ch; margin:8px 0 0; color:#5f6f88; font-size:15px; line-height:1.7; transition:color .45s ease}
 /* kartu aktif */
 #ruang-kerja .sc-item.is-active{
@@ -104,7 +104,7 @@
 #ruang-kerja .sc-item.is-active::before{transform:scaleY(1)}
 #ruang-kerja .sc-item.is-active::after{opacity:1}
 #ruang-kerja .sc-item.is-active .sc-no{background:rgba(255,255,255,.12); color:#e8d3a0}
-#ruang-kerja .sc-item.is-active h3{color:#fff}
+#ruang-kerja .sc-item.is-active .sc-judul{color:#fff}
 #ruang-kerja .sc-item.is-active p{color:rgba(255,255,255,.82)}
 #ruang-kerja .sc-thumb{display:none; position:relative; z-index:1; margin:0; aspect-ratio:4/3; overflow:hidden; background:#eef4fd}
 #ruang-kerja .sc-thumb img{display:block; width:100%; height:100%; object-fit:cover}
@@ -125,11 +125,11 @@
   #ruang-kerja .sc-thumb{display:block}
   #ruang-kerja .sc-inner{padding:20px 20px 22px}
   #ruang-kerja .sc-item:nth-child(odd) .sc-no{background:#eef4fd; color:var(--blue)}
-  #ruang-kerja .sc-item:nth-child(odd) h3{color:var(--navy)}
+  #ruang-kerja .sc-item:nth-child(odd) .sc-judul{color:var(--navy)}
   #ruang-kerja .sc-item:nth-child(odd) p{color:#5f6f88}
   #ruang-kerja .sc-item:nth-child(even){border-color:transparent; background:linear-gradient(135deg,#0b1f4a 0%,#163a85 100%)}
   #ruang-kerja .sc-item:nth-child(even) .sc-no{background:rgba(255,255,255,.12); color:#e8d3a0}
-  #ruang-kerja .sc-item:nth-child(even) h3{color:#fff}
+  #ruang-kerja .sc-item:nth-child(even) .sc-judul{color:#fff}
   #ruang-kerja .sc-item:nth-child(even) p{color:rgba(255,255,255,.82)}
 }
 @media (prefers-reduced-motion:reduce){
@@ -152,7 +152,7 @@
 #merek-kami .mk-foto img{display:block; width:100%; height:100%; object-fit:cover; transition:transform .8s cubic-bezier(.22,1,.36,1)}
 #merek-kami .mk-isi{display:flex; flex-direction:column; flex:1; padding:clamp(22px,2.4vw,30px)}
 #merek-kami .mk-atas{display:flex; align-items:baseline; justify-content:space-between; gap:12px}
-#merek-kami .mk-card h3{margin:0; color:#0b1f4a; font:700 clamp(22px,2vw,26px)/1.2 'Manrope','Poppins',sans-serif; letter-spacing:-.015em}
+#merek-kami .mk-card h2{margin:0; color:#0b1f4a; font:700 clamp(22px,2vw,26px)/1.2 'Manrope','Poppins',sans-serif; letter-spacing:-.015em}
 #merek-kami .mk-jumlah{flex:none; color:#5f6f88; font:500 14px/1 Poppins,sans-serif}
 #merek-kami .mk-desc{margin:10px 0 18px; color:#5f6f88; font-size:15.5px; line-height:1.7}
 #merek-kami .mk-chips{display:flex; flex-wrap:wrap; gap:8px; margin:0 0 22px; padding:0; list-style:none}
@@ -185,7 +185,7 @@
 }
 #keunggulan-produk .ap-titik::before{content:""; position:absolute; inset:-8px; border-radius:50%; border:2px solid rgba(255,255,255,.85); opacity:0}
 #keunggulan-produk .ap-titik.is-active{background:linear-gradient(135deg,#f0dfb4,#c8a96a); color:#0b1f4a; transform:scale(1.12)}
-#keunggulan-produk .ap-titik:focus-visible{outline:3px solid #2f6fd6; outline-offset:3px}
+#keunggulan-produk .ap-titik:focus-visible{outline:3px solid #2a64c4; outline-offset:3px}
 @media (prefers-reduced-motion:no-preference){
   @keyframes ap-denyut{0%{transform:scale(.7); opacity:.9}80%,100%{transform:scale(1.35); opacity:0}}
 }
@@ -196,15 +196,15 @@
 }
 #keunggulan-produk .ap-no{
   flex:none; width:36px; height:36px; display:grid; place-items:center; border-radius:50%;
-  background:#eef4fd; color:#2f6fd6; font:700 14px/1 'Manrope','Poppins',sans-serif; transition:background .35s ease, color .35s ease;
+  background:#eef4fd; color:#2a64c4; font:700 14px/1 'Manrope','Poppins',sans-serif; transition:background .35s ease, color .35s ease;
 }
-#keunggulan-produk .ap-item h3{margin:6px 0 4px; color:#0b1f4a; font:700 18px/1.35 'Manrope','Poppins',sans-serif; letter-spacing:-.01em}
+#keunggulan-produk .ap-item .ap-judul{display:block; margin:6px 0 4px; color:#0b1f4a; font:700 18px/1.35 'Manrope','Poppins',sans-serif; letter-spacing:-.01em}
 #keunggulan-produk .ap-item p{margin:0; color:#5f6f88; font-size:15.5px; line-height:1.65}
 #keunggulan-produk .ap-item.is-active{padding-left:10px}
 #keunggulan-produk .ap-item.is-active .ap-no{background:#0b1f4a; color:#e8d3a0}
-#keunggulan-produk .ap-item:focus-visible{outline:2px solid #2f6fd6; outline-offset:2px}
-#keunggulan-produk .ap-catatan{margin:16px 0 0; color:#8a97ad; font-size:13.5px}
-#keunggulan-produk .ap-link{display:inline-flex; align-items:center; gap:8px; margin-top:18px; color:#2f6fd6; font:600 15px/1.3 Poppins,sans-serif; text-decoration:none}
+#keunggulan-produk .ap-item:focus-visible{outline:2px solid #2a64c4; outline-offset:2px}
+#keunggulan-produk .ap-catatan{margin:16px 0 0; color:#64748b; font-size:13.5px}
+#keunggulan-produk .ap-link{display:inline-flex; align-items:center; gap:8px; margin-top:18px; color:#2a64c4; font:600 15px/1.3 Poppins,sans-serif; text-decoration:none}
 #keunggulan-produk .ap-link i{font-style:normal; transition:transform .3s ease}
 #keunggulan-produk .ap-link:hover i{transform:translateX(4px)}
 
@@ -224,13 +224,13 @@
   background:rgba(11,31,74,.88); color:#fff; font:600 12px/1 Poppins,sans-serif; letter-spacing:.04em;
 }
 #artikel-terbaru .at-isi{display:flex; flex-direction:column; flex:1; padding:22px 22px 20px}
-#artikel-terbaru .at-meta{color:#8a97ad; font:500 13px/1.4 Poppins,sans-serif}
+#artikel-terbaru .at-meta{color:#64748b; font:500 13px/1.4 Poppins,sans-serif}
 #artikel-terbaru .at-card h3{margin:8px 0 10px; color:#0b1f4a; font:700 18px/1.4 'Manrope','Poppins',sans-serif; letter-spacing:-.01em}
 #artikel-terbaru .at-desc{
   margin:0 0 18px; color:#5f6f88; font-size:15px; line-height:1.7;
   display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
 }
-#artikel-terbaru .at-link{display:inline-flex; align-items:center; gap:8px; margin-top:auto; color:#2f6fd6; font:600 15px/1.3 Poppins,sans-serif}
+#artikel-terbaru .at-link{display:inline-flex; align-items:center; gap:8px; margin-top:auto; color:#2a64c4; font:600 15px/1.3 Poppins,sans-serif}
 #artikel-terbaru .at-link i{font-style:normal; transition:transform .3s ease}
 #artikel-terbaru .at-card:hover,#artikel-terbaru .at-card:focus-visible{border-color:rgba(47,111,214,.45); box-shadow:0 26px 50px -26px rgba(11,31,74,.35); outline:0}
 #artikel-terbaru .at-card:hover .at-foto img,#artikel-terbaru .at-card:focus-visible .at-foto img{transform:scale(1.05)}
@@ -287,8 +287,8 @@ html:not([data-theme]) .footer{
   background:#fff; color:#5f6f88;
   border-top:1px solid #dbe6f4;
 }
-[data-theme="light"] .footer .foot-grid b{color:#2f6fd6; font-weight:600}
+[data-theme="light"] .footer .foot-grid b{color:#2a64c4; font-weight:600}
 [data-theme="light"] .footer .foot-grid a:not(.brand){color:#5f6f88; transition:color .2s ease}
-[data-theme="light"] .footer .foot-grid a:not(.brand):hover{color:#2f6fd6}
+[data-theme="light"] .footer .foot-grid a:not(.brand):hover{color:#2a64c4}
 [data-theme="light"] .footer .foot-grid p{color:#5f6f88}
 [data-theme="light"] .footer .copy{border-top:1px solid #dbe6f4; color:#7a8aa3}

@@ -53,7 +53,7 @@
 .pf-unit b{font-size:2.3rem;font-weight:700;letter-spacing:-.04em}
 .pf-unit small{font-size:.8rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#dcc48d}
 .pf-body{display:flex;flex-direction:column;gap:8px;flex:1;padding:22px 24px 24px}
-.pf-body h3{font-size:1.18rem;font-weight:600;letter-spacing:-.015em;line-height:1.3;color:var(--navy,#0b1f4a)}
+.pf-body h2{font-size:1.18rem;font-weight:600;letter-spacing:-.015em;line-height:1.3;color:var(--navy,#0b1f4a)}
 .pf-body p{margin-bottom:12px;font-size:.95rem;line-height:1.65;font-weight:400;color:var(--muted,#434f6b)}
 .pf-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:16px;border-top:1px solid var(--line,#e2e8f2)}
 .pf-chips a{padding:6px 13px;border:1px solid var(--line,#e2e8f2);border-radius:999px;font-size:.78rem;font-weight:500;color:#7a5d28;transition:border-color .2s,background .2s}
@@ -67,7 +67,7 @@
 [data-theme=dark] .pf-card{background:#0c1a36;border-color:rgba(255,255,255,.1);box-shadow:0 10px 30px rgba(0,0,0,.3)}
 [data-theme=dark] .pf-stats{background:#0c1a36;border-color:rgba(255,255,255,.12);box-shadow:none}
 [data-theme=dark] .pf-stats>div+div::before{background:rgba(255,255,255,.12)}
-[data-theme=dark] :is(.pf-head h2,.pf-body h3,.pf-stats b){color:#f2f6ff}
+[data-theme=dark] :is(.pf-head h2,.pf-body h2,.pf-stats b){color:#f2f6ff}
 [data-theme=dark] :is(.pf-head p,.pf-body p,.pf-stats span,.pf-count){color:#a9b8d4}
 [data-theme=dark] .pf-filter button{background:#0c1a36;border-color:rgba(255,255,255,.14);color:#f2f6ff}
 [data-theme=dark] .pf-filter button em{background:rgba(255,255,255,.1)}
@@ -87,8 +87,8 @@
 .tanpa-hero .navbar .logo-light{display:none}.tanpa-hero .navbar .logo-dark{display:block}
 @media(min-width:901px){
 .tanpa-hero .navbar .nav-menu>a:not(.btn),.tanpa-hero .navbar .dropdown-btn,.tanpa-hero .navbar .prefs{color:#0a8ae6}
-.tanpa-hero .navbar .nav-menu>a:not(.btn):hover,.tanpa-hero .navbar .dropdown-btn:hover{color:var(--gold-d)}
-.tanpa-hero .navbar .nav-menu a[aria-current=page]{color:var(--gold-d)!important}
+.tanpa-hero .navbar .nav-menu>a:not(.btn):hover,.tanpa-hero .navbar .dropdown-btn:hover{color:var(--gold-teks)}
+.tanpa-hero .navbar .nav-menu a[aria-current=page]{color:var(--gold-teks)!important}
 }
 [data-theme=dark] .tanpa-hero .navbar{background:rgba(6,14,32,.92);box-shadow:0 8px 30px rgba(0,0,0,.35)}
 [data-theme=dark] .tanpa-hero .navbar .brand,[data-theme=dark] .tanpa-hero .navbar .menu-toggle span{color:#4db8ff}
@@ -133,86 +133,86 @@
 <div class="pf-grid">
 <article class="pf-card" data-kat="pendidikan">
 <div class="pf-img"><svg class="pf-ico" aria-hidden="true"><use href="#i-pendidikan"/></svg><img class="foto" src="assets/images/portofolio/portofolio-2.webp" alt="Pengadaan lemari arsip untuk Sekolah" width="800" height="550" loading="lazy" decoding="async"><span class="pf-tag">Instansi Pendidikan</span><span class="pf-no" aria-hidden="true">01</span></div>
-<div class="pf-body"><h3>Sekolah Menengah</h3><p>Vivorti VT-SLCB untuk ruang arsip dinas, lengkap dengan pengiriman dan penataan.</p><div class="pf-chips"><a href="produk-vivorti.html#vf4">Vivorti VT-SLCB</a></div></div>
+<div class="pf-body"><h2>Sekolah Menengah</h2><p>Vivorti VT-SLCB untuk ruang arsip dinas, lengkap dengan pengiriman dan penataan.</p><div class="pf-chips"><a href="produk-vivorti.html#vf4">Vivorti VT-SLCB</a></div></div>
 </article>
 <article class="pf-card" data-kat="pendidikan">
 <div class="pf-img"><svg class="pf-ico" aria-hidden="true"><use href="#i-pendidikan"/></svg><img class="foto" src="assets/images/portofolio/portofolio-4.webp" alt="Pengadaan lemari arsip untuk Sekolah Menengah" width="800" height="550" loading="lazy" decoding="async"><span class="pf-tag">Instansi Pendidikan</span><span class="pf-no" aria-hidden="true">02</span></div>
-<div class="pf-body"><h3>Sekolah Menengah</h3><p>Vivorti VT-SLCB untuk tata usaha dan ruang guru.</p><div class="pf-chips"><a href="produk-vivorti.html#vf4">Vivorti VT-SLCB</a></div></div>
+<div class="pf-body"><h2>Sekolah Menengah</h2><p>Vivorti VT-SLCB untuk tata usaha dan ruang guru.</p><div class="pf-chips"><a href="produk-vivorti.html#vf4">Vivorti VT-SLCB</a></div></div>
 </article>
 <article class="pf-card" data-kat="hukum">
 <div class="pf-img"><svg class="pf-ico" aria-hidden="true"><use href="#i-hukum"/></svg><img class="foto" src="assets/images/portofolio/portofolio-1.webp" alt="Pengadaan lemari arsip untuk Kantor Notaris" width="800" height="550" loading="lazy" decoding="async"><span class="pf-tag">Kantor Hukum</span><span class="pf-no" aria-hidden="true">03</span></div>
-<div class="pf-body"><h3>Kantor</h3><p>Vivorti VT-SLCB untuk menyimpan file penting kantor.</p><div class="pf-chips"><a href="produk-vivorti.html#vf4">Vivorti VT-SLCB</a><a href="produk-vivorti.html#vf2">Vivorti VT-SL01</a></div></div>
+<div class="pf-body"><h2>Kantor</h2><p>Vivorti VT-SLCB untuk menyimpan file penting kantor.</p><div class="pf-chips"><a href="produk-vivorti.html#vf4">Vivorti VT-SLCB</a><a href="produk-vivorti.html#vf2">Vivorti VT-SL01</a></div></div>
 </article>
 <article class="pf-card" data-kat="kesehatan">
 <div class="pf-img"><svg class="pf-ico" aria-hidden="true"><use href="#i-kesehatan"/></svg><img class="foto" src="assets/images/portofolio/portofolio-15.webp" alt="Pengadaan lemari arsip untuk Klinik dan Rumah Sakit" width="800" height="550" loading="lazy" decoding="async"><span class="pf-tag">Instansi Kesehatan</span><span class="pf-no" aria-hidden="true">04</span></div>
-<div class="pf-body"><h3>Klinik dan Rumah Sakit</h3><p>Zeco Z-302 dan Z-201 untuk rekam medis dan berkas administrasi.</p><div class="pf-chips"><a href="produk-zecco.html#zk2">Zeco Z-302</a><a href="produk-zecco.html#zr3">Zeco Z-201</a></div></div>
+<div class="pf-body"><h2>Klinik dan Rumah Sakit</h2><p>Zeco Z-302 dan Z-201 untuk rekam medis dan berkas administrasi.</p><div class="pf-chips"><a href="produk-zecco.html#zk2">Zeco Z-302</a><a href="produk-zecco.html#zr3">Zeco Z-201</a></div></div>
 </article>
 <article class="pf-card" data-kat="perusahaan">
 <div class="pf-img"><svg class="pf-ico" aria-hidden="true"><use href="#i-perusahaan"/></svg><img class="foto" src="assets/images/portofolio/portofolio-17.webp" alt="Pengadaan lemari arsip untuk Pabrik dan Gudang" width="800" height="550" loading="lazy" decoding="async"><span class="pf-tag">Perusahaan</span><span class="pf-no" aria-hidden="true">05</span></div>
-<div class="pf-body"><h3>Pabrik dan Gudang</h3><p>Vivorti VT-SW01 pintu ayun berkunci untuk dokumen produksi dan administrasi gudang.</p><div class="pf-chips"><a href="produk-vivorti.html#vl6">Vivorti VT-SW01</a></div></div>
+<div class="pf-body"><h2>Pabrik dan Gudang</h2><p>Vivorti VT-SW01 pintu ayun berkunci untuk dokumen produksi dan administrasi gudang.</p><div class="pf-chips"><a href="produk-vivorti.html#vl6">Vivorti VT-SW01</a></div></div>
 </article>
 <article class="pf-card" data-kat="pemerintah">
 <div class="pf-img"><svg class="pf-ico" aria-hidden="true"><use href="#i-pemerintah"/></svg><img class="foto" src="assets/images/portofolio/portofolio-3.webp" alt="Pengadaan lemari arsip untuk Kantor Dinas" width="800" height="550" loading="lazy" decoding="async"><span class="pf-tag">Instansi Pemerintah</span><span class="pf-no" aria-hidden="true">06</span></div>
-<div class="pf-body"><h3>Kantor Dinas</h3><p>Vivorti VT-SL01 dan Zeco Z-301 untuk ruang arsip dinas, lengkap dengan pengiriman dan penataan.</p><div class="pf-chips"><a href="produk-vivorti.html#vf2">Vivorti VT-SL01</a><a href="produk-zecco.html#zs2">Zeco Z-301</a></div></div>
+<div class="pf-body"><h2>Kantor Dinas</h2><p>Vivorti VT-SL01 dan Zeco Z-301 untuk ruang arsip dinas, lengkap dengan pengiriman dan penataan.</p><div class="pf-chips"><a href="produk-vivorti.html#vf2">Vivorti VT-SL01</a><a href="produk-zecco.html#zs2">Zeco Z-301</a></div></div>
 </article>
 <article class="pf-card" data-kat="kesehatan">
 <div class="pf-img"><svg class="pf-ico" aria-hidden="true"><use href="#i-kesehatan"/></svg><img class="foto" src="assets/images/portofolio/portofolio-5.webp" alt="Pengadaan lemari arsip untuk Puskesmas" width="800" height="550" loading="lazy" decoding="async"><span class="pf-tag">Instansi Kesehatan</span><span class="pf-no" aria-hidden="true">07</span></div>
-<div class="pf-body"><h3>Puskesmas</h3><p>Vivorti VT-SL02G untuk rekam medis dan arsip administrasi pasien.</p><div class="pf-chips"><a href="produk-vivorti.html#vf4">Vivorti VT-SL02G</a></div></div>
+<div class="pf-body"><h2>Puskesmas</h2><p>Vivorti VT-SL02G untuk rekam medis dan arsip administrasi pasien.</p><div class="pf-chips"><a href="produk-vivorti.html#vf4">Vivorti VT-SL02G</a></div></div>
 </article>
 <article class="pf-card" data-kat="pendidikan">
 <div class="pf-img"><svg class="pf-ico" aria-hidden="true"><use href="#i-pendidikan"/></svg><img class="foto" src="assets/images/portofolio/portofolio-6.webp" alt="Pengadaan lemari arsip untuk SMK Negeri" width="800" height="550" loading="lazy" decoding="async"><span class="pf-tag">Instansi Pendidikan</span><span class="pf-no" aria-hidden="true">08</span></div>
-<div class="pf-body"><h3>SMK Negeri</h3><p>Vivorti VT-SLCB pintu geser untuk ruang tata usaha dan laboratorium.</p><div class="pf-chips"><a href="produk-vivorti.html#vp2">Vivorti VT-SLCB</a></div></div>
+<div class="pf-body"><h2>SMK Negeri</h2><p>Vivorti VT-SLCB pintu geser untuk ruang tata usaha dan laboratorium.</p><div class="pf-chips"><a href="produk-vivorti.html#vp2">Vivorti VT-SLCB</a></div></div>
 </article>
 <article class="pf-card" data-kat="perusahaan">
 <div class="pf-img"><svg class="pf-ico" aria-hidden="true"><use href="#i-perusahaan"/></svg><img class="foto" src="assets/images/portofolio/portofolio-7.webp" alt="Pengadaan lemari arsip untuk Perusahaan Distribusi dan Logistik" width="800" height="550" loading="lazy" decoding="async"><span class="pf-tag">Perusahaan</span><span class="pf-no" aria-hidden="true">09</span></div>
-<div class="pf-body"><h3>Perusahaan Distribusi dan Logistik</h3><p>Zeco Z-402 pintu ayun untuk dokumen pengiriman dan administrasi.</p><div class="pf-chips"><a href="produk-zecco.html#zf3">Zeco Z-402</a></div></div>
+<div class="pf-body"><h2>Perusahaan Distribusi dan Logistik</h2><p>Zeco Z-402 pintu ayun untuk dokumen pengiriman dan administrasi.</p><div class="pf-chips"><a href="produk-zecco.html#zf3">Zeco Z-402</a></div></div>
 </article>
 <article class="pf-card" data-kat="pemerintah">
 <div class="pf-img"><svg class="pf-ico" aria-hidden="true"><use href="#i-pemerintah"/></svg><img class="foto" src="assets/images/portofolio/portofolio-8.webp" alt="Pengadaan lemari arsip untuk Kantor Kecamatan" width="800" height="550" loading="lazy" decoding="async"><span class="pf-tag">Instansi Pemerintah</span><span class="pf-no" aria-hidden="true">10</span></div>
-<div class="pf-body"><h3>Kantor Kecamatan</h3><p>Zeco Z-301 pintu sliding kaca untuk arsip pelayanan masyarakat dan kepegawaian.</p><div class="pf-chips"><a href="produk-zecco.html#zs2">Zeco Z-301</a></div></div>
+<div class="pf-body"><h2>Kantor Kecamatan</h2><p>Zeco Z-301 pintu sliding kaca untuk arsip pelayanan masyarakat dan kepegawaian.</p><div class="pf-chips"><a href="produk-zecco.html#zs2">Zeco Z-301</a></div></div>
 </article>
 <article class="pf-card" data-kat="hukum">
 <div class="pf-img"><svg class="pf-ico" aria-hidden="true"><use href="#i-hukum"/></svg><img class="foto" src="assets/images/portofolio/portofolio-9.webp" alt="Pengadaan lemari arsip untuk Kantor Advokat" width="800" height="550" loading="lazy" decoding="async"><span class="pf-tag">Kantor Hukum</span><span class="pf-no" aria-hidden="true">11</span></div>
-<div class="pf-body"><h3>Kantor Advokat</h3><p>Vivorti VT-SLCB untuk berkas perkara dan dokumen klien yang perlu terkunci.</p><div class="pf-chips"><a href="produk-vivorti.html#vp2">Vivorti VT-SLCB</a></div></div>
+<div class="pf-body"><h2>Kantor Advokat</h2><p>Vivorti VT-SLCB untuk berkas perkara dan dokumen klien yang perlu terkunci.</p><div class="pf-chips"><a href="produk-vivorti.html#vp2">Vivorti VT-SLCB</a></div></div>
 </article>
 <article class="pf-card" data-kat="pendidikan">
 <div class="pf-img"><svg class="pf-ico" aria-hidden="true"><use href="#i-pendidikan"/></svg><img class="foto" src="assets/images/portofolio/portofolio-10.webp" alt="Pengadaan lemari arsip untuk Kampus dan Universitas" width="800" height="550" loading="lazy" decoding="async"><span class="pf-tag">Instansi Pendidikan</span><span class="pf-no" aria-hidden="true">12</span></div>
-<div class="pf-body"><h3>Kampus dan Universitas</h3><p>Zeco Z-302 pintu kaca untuk ruang dosen dan bagian administrasi akademik.</p><div class="pf-chips"><a href="produk-zecco.html#zk2">Zeco Z-302</a></div></div>
+<div class="pf-body"><h2>Kampus dan Universitas</h2><p>Zeco Z-302 pintu kaca untuk ruang dosen dan bagian administrasi akademik.</p><div class="pf-chips"><a href="produk-zecco.html#zk2">Zeco Z-302</a></div></div>
 </article>
 <article class="pf-card" data-kat="kesehatan">
 <div class="pf-img"><svg class="pf-ico" aria-hidden="true"><use href="#i-kesehatan"/></svg><img class="foto" src="assets/images/portofolio/portofolio-11.webp" alt="Pengadaan lemari arsip untuk Laboratorium Klinik" width="800" height="550" loading="lazy" decoding="async"><span class="pf-tag">Instansi Kesehatan</span><span class="pf-no" aria-hidden="true">13</span></div>
-<div class="pf-body"><h3>Laboratorium Klinik</h3><p>Zeco Z-302 untuk arsip hasil pemeriksaan dan dokumen mutu.</p><div class="pf-chips"><a href="produk-zecco.html#zk2">Zeco Z-302</a></div></div>
+<div class="pf-body"><h2>Laboratorium Klinik</h2><p>Zeco Z-302 untuk arsip hasil pemeriksaan dan dokumen mutu.</p><div class="pf-chips"><a href="produk-zecco.html#zk2">Zeco Z-302</a></div></div>
 </article>
 <article class="pf-card" data-kat="perusahaan">
 <div class="pf-img"><svg class="pf-ico" aria-hidden="true"><use href="#i-perusahaan"/></svg><img class="foto" src="assets/images/portofolio/portofolio-12.webp" alt="Pengadaan lemari arsip untuk Kantor Pusat Perusahaan" width="800" height="550" loading="lazy" decoding="async"><span class="pf-tag">Perusahaan</span><span class="pf-no" aria-hidden="true">14</span></div>
-<div class="pf-body"><h3>Kantor Pusat Perusahaan</h3><p>Kombinasi Vivorti dan Zeco untuk ruang finance, HRD, dan legal.</p><div class="pf-chips"><a href="produk-vivorti.html#vf4">Vivorti VT-SL02G</a><a href="produk-zecco.html#zs2">Zeco Z-301</a></div></div>
+<div class="pf-body"><h2>Kantor Pusat Perusahaan</h2><p>Kombinasi Vivorti dan Zeco untuk ruang finance, HRD, dan legal.</p><div class="pf-chips"><a href="produk-vivorti.html#vf4">Vivorti VT-SL02G</a><a href="produk-zecco.html#zs2">Zeco Z-301</a></div></div>
 </article>
 <article class="pf-card" data-kat="pemerintah">
 <div class="pf-img"><svg class="pf-ico" aria-hidden="true"><use href="#i-pemerintah"/></svg><img class="foto" src="assets/images/portofolio/portofolio-13.webp" alt="Pengadaan lemari arsip untuk Perpustakaan dan Arsip Daerah" width="800" height="550" loading="lazy" decoding="async"><span class="pf-tag">Instansi Pemerintah</span><span class="pf-no" aria-hidden="true">15</span></div>
-<div class="pf-body"><h3>Perpustakaan dan Arsip Daerah</h3><p>Lemari arsip besi untuk penyimpanan dokumen dan koleksi arsip yang tertata.</p><div class="pf-chips"><a href="produk-vivorti.html#vf4">Vivorti VT-SL02G</a><a href="produk-zecco.html#zr3">Zeco Z-201</a></div></div>
+<div class="pf-body"><h2>Perpustakaan dan Arsip Daerah</h2><p>Lemari arsip besi untuk penyimpanan dokumen dan koleksi arsip yang tertata.</p><div class="pf-chips"><a href="produk-vivorti.html#vf4">Vivorti VT-SL02G</a><a href="produk-zecco.html#zr3">Zeco Z-201</a></div></div>
 </article>
 <article class="pf-card" data-kat="kesehatan">
 <div class="pf-img"><svg class="pf-ico" aria-hidden="true"><use href="#i-kesehatan"/></svg><img class="foto" src="assets/images/portofolio/portofolio-14.webp" alt="Pengadaan lemari arsip untuk Rumah Sakit Swasta" width="800" height="550" loading="lazy" decoding="async"><span class="pf-tag">Instansi Kesehatan</span><span class="pf-no" aria-hidden="true">16</span></div>
-<div class="pf-body"><h3>Rumah Sakit Swasta</h3><p>Zeco Z-201 pintu ayun untuk ruang rekam medis berkapasitas besar.</p><div class="pf-chips"><a href="produk-zecco.html#zr3">Zeco Z-201</a></div></div>
+<div class="pf-body"><h2>Rumah Sakit Swasta</h2><p>Zeco Z-201 pintu ayun untuk ruang rekam medis berkapasitas besar.</p><div class="pf-chips"><a href="produk-zecco.html#zr3">Zeco Z-201</a></div></div>
 </article>
 <article class="pf-card" data-kat="pendidikan">
 <div class="pf-img"><svg class="pf-ico" aria-hidden="true"><use href="#i-pendidikan"/></svg><img class="foto" src="assets/images/portofolio/portofolio-16.webp" alt="Pengadaan lemari arsip untuk Sekolah Dasar" width="800" height="550" loading="lazy" decoding="async"><span class="pf-tag">Instansi Pendidikan</span><span class="pf-no" aria-hidden="true">17</span></div>
-<div class="pf-body"><h3>Sekolah Dasar</h3><p>Vivorti VT-SW01 pintu ayun untuk ruang guru dan penyimpanan perlengkapan sekolah.</p><div class="pf-chips"><a href="produk-vivorti.html#vl6">Vivorti VT-SW01</a></div></div>
+<div class="pf-body"><h2>Sekolah Dasar</h2><p>Vivorti VT-SW01 pintu ayun untuk ruang guru dan penyimpanan perlengkapan sekolah.</p><div class="pf-chips"><a href="produk-vivorti.html#vl6">Vivorti VT-SW01</a></div></div>
 </article>
 <article class="pf-card" data-kat="perusahaan">
 <div class="pf-img"><svg class="pf-ico" aria-hidden="true"><use href="#i-perusahaan"/></svg><img class="foto" src="assets/images/portofolio/portofolio-18.webp" alt="Pengadaan lemari arsip untuk Hotel dan Perhotelan" width="800" height="550" loading="lazy" decoding="async"><span class="pf-tag">Perusahaan</span><span class="pf-no" aria-hidden="true">18</span></div>
-<div class="pf-body"><h3>Hotel dan Perhotelan</h3><p>Vivorti VT-SW01 dan VT-SL01 untuk lemari arsip ruang back office.</p><div class="pf-chips"><a href="produk-vivorti.html#vl6">Vivorti VT-SW01</a><a href="produk-vivorti.html#vf2">Vivorti VT-SL01</a></div></div>
+<div class="pf-body"><h2>Hotel dan Perhotelan</h2><p>Vivorti VT-SW01 dan VT-SL01 untuk lemari arsip ruang back office.</p><div class="pf-chips"><a href="produk-vivorti.html#vl6">Vivorti VT-SW01</a><a href="produk-vivorti.html#vf2">Vivorti VT-SL01</a></div></div>
 </article>
 </div></div></section>
 <section class="cta" data-bg="assets/images/bg/cta-1.jpg,assets/images/bg/cta-2.jpg" data-interval="8000"><div class="bg-slides"><span class="on" style="background-image:url('assets/images/bg/cta-1.jpg')"></span></div><div class="wrap cta-inner"><div><h2>Bingung memilih merek, model, atau jumlah?</h2><p>Kirim denah ruangan dan perkiraan jumlah berkas, kami rekomendasikan modelnya.</p></div><a href="kontak.html" class="btn btn-light">Konsultasi Sekarang</a></div></section>
 </main>
 <footer class="footer"><div class="wrap foot-grid">
-<div><a href="index.html" class="brand" aria-label="Cahaya Mustika Internesia"><img src="assets/images/logoCMI.webp" alt="Cahaya Mustika Internesia" width="220" height="56"></a><p>Cahaya Mustika Internesia, distributor lemari arsip merek Vivorti dan Zeco di Jakarta, melayani pengiriman ke seluruh Indonesia.</p></div>
+<div><a href="index.html" class="brand" aria-label="Cahaya Mustika Internesia"><img src="assets/images/LOGO CMI (1).webp" alt="Cahaya Mustika Internesia" width="208" height="56"></a><p>Cahaya Mustika Internesia, distributor lemari arsip merek Vivorti dan Zeco di Jakarta, melayani pengiriman ke seluruh Indonesia.</p></div>
 <div><b>Vivorti</b><a href="produk-vivorti.html#vf2">Vivorti VT-SL01</a><a href="produk-vivorti.html#vf4">Vivorti VT-SL02G</a><a href="produk-vivorti.html#vp2">Vivorti VT-SLCB</a><a href="produk-vivorti.html#vl6">Vivorti VT-SW01</a></div>
 <div><b>Zeco</b><a href="produk-zecco.html#zs2">Zeco Z-301</a><a href="produk-zecco.html#zk2">Zeco Z-302</a><a href="produk-zecco.html#zr3">Zeco Z-201</a><a href="produk-zecco.html#zf3">Zeco Z-402</a></div>
 <div><b>Perusahaan</b><a href="portofolio.html">Portofolio</a><a href="artikel.html">Artikel</a><a href="index.html#premium-faq">Tanya Jawab</a><a href="kontak.html">Kontak Kami</a></div></div>
 <div class="wrap copy">&copy; 2026 Cahaya Mustika Internesia. Semua hak dilindungi.</div></footer>
-<script src="js/kamus-en.js" defer></script><script src="js/prefs.js" defer></script><script src="js/latar.js" defer></script><script src="js/script.js" defer></script>
+<script src="js/prefs.js" defer></script><script src="js/latar.js" defer></script><script src="js/script.js" defer></script>
 <script>
 /* Portofolio: penyaring sektor, kemunculan kartu saat digulir, dan cadangan bila foto belum ada.
    Foto proyek: assets/images/portofolio/portofolio-1.webp sampai portofolio-18.webp (pasangan foto per kartu diatur di atribut src tiap kartu).

@@ -2,7 +2,7 @@
    Dimuat SETELAH css/style.css di produk.html, produk-vivorti.html, dan produk-zecco.html.
    Ubah warna cukup di blok :root di bawah ini. Warna diambil dari beranda (bagian FAQ dan tombol). */
 :root{
-  --pt-blue:#2f6fd6;          /* biru utama beranda */
+  --pt-blue:#2a64c4;          /* biru utama beranda */
   --pt-blue-a:#3b7fe0;        /* awal gradasi */
   --pt-blue-b:#5a9af0;        /* akhir gradasi */
   --pt-tint:#dbe9fd;          /* biru muda untuk teks di atas biru */
@@ -24,7 +24,7 @@
 .pcard:hover{border-color:rgba(47,111,214,.40) !important;box-shadow:var(--pt-shadow) !important;transform:translateY(-3px)}
 .pcard .thumb{background:linear-gradient(160deg,#eaf2fe 0%,#cfe0fb 100%) !important}
 .pcard .pbody{background:#fff !important;color:var(--pt-text) !important}
-.pcard .pbody h4{color:var(--pt-ink) !important}
+.pcard .pbody h2{color:var(--pt-ink) !important}
 .pcard .pbody p{color:var(--pt-text) !important}
 .pcard .ptype{color:var(--pt-blue) !important;background:rgba(47,111,214,.08);border:1px solid rgba(47,111,214,.28);border-radius:999px;padding:4px 11px;display:inline-block}
 .pcard dl dt{color:#5f6b82 !important}
@@ -53,13 +53,13 @@
 .bp-models{display:flex;flex-wrap:wrap;gap:8px}
 .bp-models span{padding:5px 12px;border-radius:999px;background:rgba(47,111,214,.08);border:1px solid rgba(47,111,214,.22);color:var(--pt-blue);font-weight:600;font-size:1.04rem}
 /* Tombol "Lihat produk ...": gradasi biru tua seperti CTA penutup, panah dalam lingkaran emas */
-.bp-go{position:relative;overflow:hidden;isolation:isolate;margin-top:auto;align-self:center;width:fit-content;display:inline-flex;align-items:center;justify-content:space-between;gap:18px;padding:7px 7px 7px 24px;border-radius:999px;background:linear-gradient(135deg,#0b1f4a 0%,#173a78 55%,#2f6fd6 100%);color:#fff;font-weight:600;font-size:1.12rem;line-height:1.2;letter-spacing:.01em;box-shadow:0 12px 26px rgba(11,31,74,.26);transition:box-shadow .3s}
-.bp-go::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,#173a78 0%,#2f6fd6 100%);opacity:0;transition:opacity .3s}
+.bp-go{position:relative;overflow:hidden;isolation:isolate;margin-top:auto;align-self:center;width:fit-content;display:inline-flex;align-items:center;justify-content:space-between;gap:18px;padding:7px 7px 7px 24px;border-radius:999px;background:linear-gradient(135deg,#0b1f4a 0%,#173a78 55%,#2a64c4 100%);color:#fff;font-weight:600;font-size:1.12rem;line-height:1.2;letter-spacing:.01em;box-shadow:0 12px 26px rgba(11,31,74,.26);transition:box-shadow .3s}
+.bp-go::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,#173a78 0%,#2a64c4 100%);opacity:0;transition:opacity .3s}
 .bp-card:hover .bp-go::before{opacity:1}
 .bp-card:hover .bp-go{box-shadow:0 16px 32px rgba(47,111,214,.34)}
 .bp-go i{flex:none;width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(135deg,#dcc48d,#c8a96a 55%,#b18f4c);color:#0b1f4a;font-style:normal;font-size:1.3rem;line-height:1;box-shadow:0 4px 12px rgba(0,0,0,.22);transition:transform .3s}
 .bp-card:hover .bp-go i{transform:translateX(4px)}
-[data-theme=dark] .bp-go{background:linear-gradient(135deg,#173a78 0%,#2f6fd6 100%);box-shadow:0 12px 26px rgba(0,0,0,.4)}
+[data-theme=dark] .bp-go{background:linear-gradient(135deg,#173a78 0%,#2a64c4 100%);box-shadow:0 12px 26px rgba(0,0,0,.4)}
 @media(max-width:800px){.brand-pick{grid-template-columns:1fr}.bp-card{padding:24px}}
 
 /* ---------- Tautan antar merek dan remah roti ---------- */
@@ -73,7 +73,7 @@
 [data-theme=dark] .pcard,[data-theme=dark] .bp-card{background:#0f1e3d !important;border-color:rgba(255,255,255,.12) !important}
 [data-theme=dark] .pcard .pbody{background:#0f1e3d !important}
 [data-theme=dark] .pcard .thumb,[data-theme=dark] .bp-logo{background:linear-gradient(160deg,#16294f 0%,#0d1b38 100%) !important}
-[data-theme=dark] .pcard .pbody h4,[data-theme=dark] .bp-card h2,[data-theme=dark] .pcard dl dd{color:#eef3fc !important}
+[data-theme=dark] .pcard .pbody h2,[data-theme=dark] .bp-card h2,[data-theme=dark] .pcard dl dd{color:#eef3fc !important}
 [data-theme=dark] .pcard .pbody p,[data-theme=dark] .bp-card p,[data-theme=dark] .brand-switch,[data-theme=dark] #produk .crumbs{color:#a9b8d4 !important}
 [data-theme=dark] .sz{background:rgba(255,255,255,.06) !important;border-color:rgba(255,255,255,.16) !important;color:#c3d2ee !important}
 [data-theme=dark] .sz:hover{background:rgba(255,255,255,.14) !important}

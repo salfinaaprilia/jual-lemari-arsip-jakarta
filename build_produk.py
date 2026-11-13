@@ -49,7 +49,7 @@ for mm in re.finditer(r'const UKURAN = \{(.*?)\n  \};', prod, re.S):
 # --- data produk dari kartu (foto, jenis, nama, deskripsi). Kotak dl Ukuran/Kunci/Cocok untuk boleh tidak ada ---
 batas = prod.index('id="zecco"')
 P = []
-for m in re.finditer(r'<article class="pcard" id="(\w+)">.*?<img src="([^"]+)".*?<span class="ptype">(.*?)</span><h4>(.*?)</h4><p>(.*?)</p>'
+for m in re.finditer(r'<article class="pcard" id="(\w+)">.*?<img src="([^"]+)".*?<span class="ptype">(.*?)</span><h2>(.*?)</h2><p>(.*?)</p>'
                      r'(?:\s*<dl><div><dt>Ukuran</dt><dd>(.*?)</dd></div><div><dt>Kunci</dt><dd>(.*?)</dd></div>'
                      r'<div class="full"><dt>Cocok untuk</dt><dd>(.*?)</dd></div></dl>)?', prod, re.S):
     i, img, tipe, nama, desc, uk, kunci, cocok = m.groups()
@@ -87,7 +87,7 @@ TPL = '''<!DOCTYPE html>
 <script type="application/ld+json">@@LD@@</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" href="../assets/images/logo.svg"><link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/produk-detail.css?v=4">
+<link rel="icon" href="../assets/images/logo.svg"><link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/produk-detail.css?v=10">
 </head>
 <body>
 @@NAV@@
