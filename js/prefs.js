@@ -76,7 +76,7 @@ footer.footer.ft .ft-bar a:hover{color:#2a64c4}
 <div class="wrap ft-main">
   <div class="ft-grid">
     <div class="ft-brand">
-      <a class="ft-logo" href="${p}index.html" aria-label="Cahaya Mustika Internesia, beranda"><img src="${p}assets/images/LOGO CMI (1).webp" alt="Cahaya Mustika Internesia" width="219" height="56"></a>
+      <a class="ft-logo" href="${p}index.html" aria-label="Cahaya Mustika Internesia, beranda"><img src="${p}assets/images/LOGO CMI (1).webp" alt="Cahaya Mustika Internesia" width="209" height="56"></a>
       <p>Distributor lemari arsip merek Vivorti dan Zeco di Jakarta, melayani pengiriman ke seluruh Indonesia.</p>
     </div>
     <nav class="ft-list" aria-label="Informasi perusahaan"><h2>Informasi Perusahaan</h2>${infoLinks}</nav>
